@@ -50,6 +50,20 @@ const IconCircle = styled(Box)(() => ({
   },
 }));
 
+const Title = styled(Typography)(({ theme }) => ({
+  color: "#FFFFF",
+  fontSize: "17px",
+  fontWeight: "bold",
+  [theme.breakpoints.down("sm")]: {},
+}));
+
+const Description = styled(Typography)(({ theme }) => ({
+  color: "#D9D9D9",
+  fontSize: "10px",
+
+  [theme.breakpoints.down("sm")]: {},
+}));
+
 function BottomContainer() {
   return (
     <Container>
@@ -64,36 +78,36 @@ function BottomContainer() {
           <IconCircle>
             <Image src={ClinicallyImg} alt="ClinicallyImg"></Image>
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             Clinically Studied
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             All products that we offer have undergone lab and safety tests
-          </Typography>
+          </Description>
         </BottomFeatureBox>
 
         <BottomFeatureBox>
           <IconCircle>
             <Image src={VegetarianFriendlyImg} alt="VegetarianFriendlyImg" />
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             Vegetarian Friendly
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             We have a wide selection of vegetarian products to meet your needs
-          </Typography>
+          </Description>
         </BottomFeatureBox>
 
         <BottomFeatureBox>
           <IconCircle>
             <Image src={MadeInIndiaImg} alt="MadeInIndiaImg"></Image>
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             Made In India
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             Shop local and explore health products made right here in India
-          </Typography>
+          </Description>
         </BottomFeatureBox>
       </Stack>
 
@@ -108,36 +122,36 @@ function BottomContainer() {
           <IconCircle>
             <Image src={FreeShippingImg} alt="FreeShippingImg"></Image>
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             Free Shipping
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             We deliver to your door with no shipping costs on your orders
-          </Typography>
+          </Description>
         </BottomFeatureBox>
 
         <BottomFeatureBox>
           <IconCircle>
             <Image src={NoRiskImg} alt="NoRiskImg"></Image>
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             No Risk
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             We ensure that all products are safe and within their use-by date
-          </Typography>
+          </Description>
         </BottomFeatureBox>
 
         <BottomFeatureBox>
           <IconCircle>
             <Image src={GMOImg} alt="GMOImg"></Image>
           </IconCircle>
-          <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+          <Title>
             GMO Free
-          </Typography>
-          <Typography variant="body2" sx={{ color: "white", fontSize: "12px" }}>
+          </Title>
+          <Description>
             Natural, no modified products and derivatives for those who need it
-          </Typography>
+          </Description>
         </BottomFeatureBox>
       </Stack>
     </Container>

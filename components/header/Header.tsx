@@ -3,13 +3,14 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 function Header() {
   return (
-    <Box>
+    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
       <Image
         src={edenPharmacyImg}
         alt="edenPharmacyImg"
-        width={100}
+        width={150}
         height={30}
       />
+      <Box></Box>
     </Box>
   );
 }

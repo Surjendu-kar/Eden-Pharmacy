@@ -13,7 +13,7 @@ const Container = styled(Box)(({ theme }) => ({
 }));
 
 const LeftContent = styled(Stack)(({ theme }) => ({
-  width: "20%",
+  width: "25%",
   gap: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -28,7 +28,7 @@ const CenterContent = styled(Stack)(({ theme }) => ({
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
-  width: "25%",
+  width: "28%",
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -46,7 +46,7 @@ const FeatureBox = styled(Box)(({ theme }) => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#003569",
-  fontSize: "18px",
+  fontSize: "17px",
   fontWeight: "bold",
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -75,7 +75,9 @@ function CenterContainer() {
         <Description sx={{ fontSize: "13px" }}>
           Online Medical Supplies
         </Description>
-        <Title sx={{ lineHeight: "20px" }}>Get Your Vitamins & Minerals</Title>
+        <Title sx={{ lineHeight: "20px", fontSize: "20px" }}>
+          Get Your Vitamins & Minerals
+        </Title>
         <ButtonStyle>Explore</ButtonStyle>
       </LeftContent>
 
