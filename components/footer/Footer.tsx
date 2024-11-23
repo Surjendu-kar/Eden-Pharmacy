@@ -6,9 +6,7 @@ function Footer() {
       sx={{
         padding: "1rem",
       }}
-    >
-      footer
-    </Stack>
+    ></Stack>
   );
 }
 

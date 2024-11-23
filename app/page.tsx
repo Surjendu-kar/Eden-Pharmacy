@@ -13,15 +13,10 @@ function Home() {
         <HeroSection />
 
         {/* Middle Content */}
-        <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-          <Box bgcolor={"red"} width={100} height={100}></Box>
-          <Box bgcolor={"yellow"} width={100} height={100}></Box>
-          <Box bgcolor={"blue"} width={100} height={100}></Box>
-          <Box bgcolor={"black"} width={100} height={100}></Box>
-        </Box>
+        <Box sx={{ display: "flex", flexWrap: "wrap" }}></Box>
         {/* Bottom Content */}
         <Stack>
-          <Typography>Latest News</Typography>
+          <Typography></Typography>
         </Stack>
       </Stack>
       {/* footer */}
