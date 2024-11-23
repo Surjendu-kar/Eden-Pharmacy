@@ -23,20 +23,21 @@ const Container = styled(Box)(({ theme }) => ({
 
 const LeftContent = styled(Stack)(({ theme }) => ({
   width: "20%",
-  gap: theme.spacing(1),
+  gap: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const CenterContent = styled(Stack)(({ theme }) => ({
+  height: "270px",
+  width: "250px",
   background: "#FFE9B5",
-  borderTopLeftRadius: "80px",
-  borderBottomRightRadius: "80px",
+  borderTopLeftRadius: "90px",
+  borderBottomRightRadius: "90px",
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
-  width: "28%",
-  gap: theme.spacing(2),
+  width: "25%",
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -95,14 +96,24 @@ function HeroSection() {
           <Description sx={{ fontSize: "13px" }}>
             Online Medical Supplies
           </Description>
-          <Title>Get Your Vitamins & Minerals</Title>
+          <Title sx={{ lineHeight: "20px" }}>
+            Get Your Vitamins & Minerals
+          </Title>
           <ButtonStyle>Explore</ButtonStyle>
         </LeftContent>
 
         {/* center content */}
-        <CenterContent>
-          <Image src={Medicine} alt="Medicine" width={230} height={250} />
-        </CenterContent>
+        <Box width={"30%"}>
+          <CenterContent>
+            <Image
+              src={Medicine}
+              alt="Medicine"
+              width={280}
+              height={290}
+              style={{ position: "relative", bottom: 60, right: 15 }}
+            />
+          </CenterContent>
+        </Box>
 
         {/* right content */}
         <RightContent>
