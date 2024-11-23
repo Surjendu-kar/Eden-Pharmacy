@@ -14,13 +14,13 @@ const Container = styled(Box)(({ theme }) => ({
   padding: "40px",
   display: "flex",
   flexDirection: "column",
-  gap: theme.spacing(4),
+  gap: theme.spacing(6),
   position: "absolute",
   bottom: "0",
   left: "50%",
-  transform: "translate(-50%, 70%)",
+  transform: "translate(-50%, 20%)",
   zIndex: 1,
-  height: "350px",
+  height: "380px",
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -31,7 +31,7 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
   textAlign: "center",
   gap: theme.spacing(1),
   color: "white",
-  width: "20%",
+  width: "16%",
   position: "relative",
   bottom: 80,
 }));
@@ -52,14 +52,14 @@ const IconCircle = styled(Box)(() => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#FFFFF",
-  fontSize: "17px",
+  fontSize: "18px",
   fontWeight: "bold",
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#D9D9D9",
-  fontSize: "10px",
+  fontSize: "11px",
 
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -78,9 +78,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={ClinicallyImg} alt="ClinicallyImg"></Image>
           </IconCircle>
-          <Title>
-            Clinically Studied
-          </Title>
+          <Title>Clinically Studied</Title>
           <Description>
             All products that we offer have undergone lab and safety tests
           </Description>
@@ -90,9 +88,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={VegetarianFriendlyImg} alt="VegetarianFriendlyImg" />
           </IconCircle>
-          <Title>
-            Vegetarian Friendly
-          </Title>
+          <Title>Vegetarian Friendly</Title>
           <Description>
             We have a wide selection of vegetarian products to meet your needs
           </Description>
@@ -102,9 +98,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={MadeInIndiaImg} alt="MadeInIndiaImg"></Image>
           </IconCircle>
-          <Title>
-            Made In India
-          </Title>
+          <Title>Made In India</Title>
           <Description>
             Shop local and explore health products made right here in India
           </Description>
@@ -122,9 +116,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={FreeShippingImg} alt="FreeShippingImg"></Image>
           </IconCircle>
-          <Title>
-            Free Shipping
-          </Title>
+          <Title>Free Shipping</Title>
           <Description>
             We deliver to your door with no shipping costs on your orders
           </Description>
@@ -134,9 +126,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={NoRiskImg} alt="NoRiskImg"></Image>
           </IconCircle>
-          <Title>
-            No Risk
-          </Title>
+          <Title>No Risk</Title>
           <Description>
             We ensure that all products are safe and within their use-by date
           </Description>
@@ -146,9 +136,7 @@ function BottomContainer() {
           <IconCircle>
             <Image src={GMOImg} alt="GMOImg"></Image>
           </IconCircle>
-          <Title>
-            GMO Free
-          </Title>
+          <Title>GMO Free</Title>
           <Description>
             Natural, no modified products and derivatives for those who need it
           </Description>

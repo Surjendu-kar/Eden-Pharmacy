@@ -2,9 +2,10 @@ import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { Box, Stack, Typography } from "@mui/material";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import MiddleSection from "@/components/MiddleSection/MiddleSection";
 function Home() {
   return (
-    <Stack sx={{ minHeight: "100vh" }}>
+    <Stack sx={{ height: "100vh" }}>
       {/* header */}
       <Header />
       {/* main container */}
@@ -12,8 +13,10 @@ function Home() {
         {/* Top Content */}
         <HeroSection />
 
+        <Box sx={{ mt: "18rem" }}></Box>
         {/* Middle Content */}
-        <Box sx={{ display: "flex", flexWrap: "wrap" }}></Box>
+        <MiddleSection />
+
         {/* Bottom Content */}
         <Stack>
           <Typography></Typography>

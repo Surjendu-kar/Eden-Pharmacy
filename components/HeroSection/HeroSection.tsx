@@ -5,7 +5,7 @@ import BottomContainer from "./BottomContainer";
 
 const MainContainer = styled(Stack)(({ theme }) => ({
   background: "#E2F5FB",
-  height: "100dvh",
+  height: "80dvh",
   alignItems: "center",
   margin: "0.75rem",
   // position: "relative",
