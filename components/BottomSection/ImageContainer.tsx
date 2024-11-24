@@ -104,7 +104,7 @@ function ImageContainer() {
         <ImageWrapper data-large="false">
           <Image
             src={Img1}
-            alt={"img1"}
+            alt={"img3"}
             fill
             style={{ borderRadius: "15px" }}
           />
@@ -116,7 +116,7 @@ function ImageContainer() {
         <ImageWrapper data-large="true">
           <Image
             src={Img2}
-            alt={"img2"}
+            alt={"img4"}
             fill
             style={{ borderRadius: "15px" }}
           />
@@ -132,7 +132,7 @@ function ImageContainer() {
         <ImageWrapper data-large="true">
           <Image
             src={Img1}
-            alt={"img1"}
+            alt={"img5"}
             fill
             style={{ borderRadius: "15px" }}
           />
@@ -144,7 +144,7 @@ function ImageContainer() {
         <ImageWrapper data-large="false">
           <Image
             src={Img2}
-            alt={"img2"}
+            alt={"img6"}
             fill
             style={{ borderRadius: "15px" }}
           />
@@ -160,7 +160,7 @@ function ImageContainer() {
         <ImageWrapper data-large="false">
           <Image
             src={Img1}
-            alt={"img1"}
+            alt={"img7"}
             fill
             style={{ borderRadius: "15px" }}
           />
@@ -172,7 +172,7 @@ function ImageContainer() {
         <ImageWrapper data-large="true">
           <Image
             src={Img2}
-            alt={"img2"}
+            alt={"img8"}
             fill
             style={{ borderRadius: "15px" }}
           />
