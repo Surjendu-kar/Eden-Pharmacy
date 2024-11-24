@@ -1,12 +1,12 @@
 "use client";
 import { Box, Stack, styled, Typography } from "@mui/material";
 import React from "react";
-import Img1 from "@/public/vitaminImg/Vitamin-C.svg";
-import Img2 from "@/public/vitaminImg/div.elbzotech-banner-info-wrap (1).svg";
-import Img3 from "@/public/vitaminImg/Megnesium.svg";
-import Img4 from "@/public/vitaminImg/div.elbzotech-banner-info-wrap.svg";
-import Img5 from "@/public/vitaminImg/lactobacillus.svg";
-import Img6 from "@/public/vitaminImg/Demo.svg";
+import Img1 from "@/public/CenterImages/Vitamin-C.svg";
+import Img2 from "@/public/CenterImages/div.elbzotech-banner-info-wrap (1).svg";
+import Img3 from "@/public/CenterImages/Megnesium.svg";
+import Img4 from "@/public/CenterImages/div.elbzotech-banner-info-wrap.svg";
+import Img5 from "@/public/CenterImages/lactobacillus.svg";
+import Img6 from "@/public/CenterImages/Demo.svg";
 import Image from "next/image";
 
 const MainContainer = styled(Box)(({ theme }) => ({
