@@ -1,8 +1,9 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import MiddleSection from "@/components/MiddleSection/MiddleSection";
+import BottomSection from "@/components/BottomSection/BottomSection";
 function Home() {
   return (
     <Stack sx={{ height: "100vh" }}>
@@ -18,9 +19,7 @@ function Home() {
         <MiddleSection />
 
         {/* Bottom Content */}
-        <Stack>
-          <Typography></Typography>
-        </Stack>
+        <BottomSection />
       </Stack>
       {/* footer */}
       <Footer />
