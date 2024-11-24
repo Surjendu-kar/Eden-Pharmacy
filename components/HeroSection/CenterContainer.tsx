@@ -24,7 +24,10 @@ const CenterContent = styled(Stack)(({ theme }) => ({
   background: "#FFE9B5",
   borderTopLeftRadius: "90px",
   borderBottomRightRadius: "90px",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    height: "200px",
+    width: "180px",
+  },
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
@@ -48,14 +51,16 @@ const Title = styled(Typography)(({ theme }) => ({
   color: "#003569",
   fontSize: "17px",
   fontWeight: "bold",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "13px",
+  },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#727272",
   fontSize: "10px",
 
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { fontSize: "8px" },
 }));
 
 const ButtonStyle = styled("button")(({ theme }) => ({

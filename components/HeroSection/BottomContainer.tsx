@@ -21,7 +21,9 @@ const Container = styled(Box)(({ theme }) => ({
   transform: "translate(-50%, 20%)",
   zIndex: 1,
   height: "380px",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    padding: "20px",
+  },
 }));
 
 const BottomFeatureBox = styled(Box)(({ theme }) => ({
@@ -34,9 +36,12 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
   width: "16%",
   position: "relative",
   bottom: 80,
+  [theme.breakpoints.down("sm")]: {
+    width: "40%",
+  },
 }));
 
-const IconCircle = styled(Box)(() => ({
+const IconCircle = styled(Box)(({ theme }) => ({
   background: "white",
   borderRadius: "50%",
   width: "70px",
@@ -48,20 +53,28 @@ const IconCircle = styled(Box)(() => ({
   "& img": {
     width: "25px",
   },
+  [theme.breakpoints.down("sm")]: {
+    width: "50px",
+    height: "50px",
+  },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#FFFFF",
   fontSize: "18px",
   fontWeight: "bold",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "15px",
+  },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#D9D9D9",
   fontSize: "11px",
 
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "9px",
+  },
 }));
 
 function BottomContainer() {

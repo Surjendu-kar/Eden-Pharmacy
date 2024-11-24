@@ -23,6 +23,24 @@ const ContactBox = styled(Box)(({ theme }) => ({
   background: "#215D72",
   padding: "1rem 6rem",
   borderRadius: "15px",
+  [theme.breakpoints.down("sm")]: {
+    padding: "0.5rem 1rem",
+  },
+}));
+
+const Contact = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {},
+}));
+
+const Heading = styled(Typography)(({ theme }) => ({
+  color: "#e3e3e3",
+  fontSize: "15px",
+  [theme.breakpoints.down("sm")]: {},
+}));
+
+const Title = styled(Typography)(({ theme }) => ({
+  color: "white",
+  fontSize: "16px",
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -42,10 +60,10 @@ function Footer() {
               <Box>
                 <Image src={PhoneImg} alt="PhoneImg" height={50} />
               </Box>
-              <Box>
-                <Typography sx={{ color: "#e3e3e3" }}>Phone Number</Typography>
-                <Typography sx={{ color: "white" }}>+974 3118 1843</Typography>
-              </Box>
+              <Contact>
+                <Heading>Phone Number</Heading>
+                <Title>+974 3118 1843</Title>
+              </Contact>
             </ContactBox>
           </Stack>
 
@@ -53,24 +71,20 @@ function Footer() {
             <Box>
               <Image src={EmailImg} alt="EmailImg" height={50} />
             </Box>
-            <Box>
-              <Typography sx={{ color: "#e3e3e3" }}>Email Address</Typography>
-              <Typography sx={{ color: "white" }}>
-                Elbrithcqhr@gmail.com
-              </Typography>
-            </Box>
+            <Contact>
+              <Heading>Email Address</Heading>
+              <Title>Elbrithcqhr@gmail.com</Title>
+            </Contact>
           </ContactBox>
 
           <ContactBox>
             <Box>
               <Image src={LocationImg} alt="LocationImg" height={50} />
             </Box>
-            <Box>
-              <Typography sx={{ color: "#e3e3e3" }}>Office Location</Typography>
-              <Typography sx={{ color: "white" }}>
-                Ambassador Street, Zone 61,
-              </Typography>
-            </Box>
+            <Contact>
+              <Heading>Office Location</Heading>
+              <Title>Ambassador Street, Zone 61,</Title>
+            </Contact>
           </ContactBox>
         </Box>
 

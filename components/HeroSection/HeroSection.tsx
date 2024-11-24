@@ -17,7 +17,9 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: "#003569",
   fontSize: "5rem",
   fontWeight: 700,
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
 }));
 
 function HeroSection() {
