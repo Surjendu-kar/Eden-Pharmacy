@@ -7,6 +7,15 @@ import Logo from "@/public/eden pharmacy.png";
 import Image from "next/image";
 import Landicon from "@/public/FooterImg/location.svg";
 
+const FooterContainer = styled(Stack)(({ theme }) => ({
+  marginTop: "1rem",
+  background: "#17414F",
+  padding: "2rem",
+  alignItems: "center",
+  justifyContent: "center",
+  [theme.breakpoints.down("sm")]: {},
+}));
+
 const ContactBox = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: theme.spacing(4),
@@ -17,28 +26,28 @@ const ContactBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
 }));
 
+const Description = styled(Typography)(({ theme }) => ({
+  color: "#e3e3e3",
+  fontSize: "14px",
+  [theme.breakpoints.down("sm")]: {},
+}));
+
 function Footer() {
   return (
-    <Stack
-      sx={{
-        marginTop: "1rem",
-        background: "#17414F",
-        padding: "2rem",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <FooterContainer>
       <Stack sx={{ gap: 4, width: "75%" }}>
         <Box sx={{ display: "flex ", justifyContent: "center", gap: 3 }}>
-          <ContactBox>
-            <Box>
-              <Image src={PhoneImg} alt="PhoneImg" height={50} />
-            </Box>
-            <Box>
-              <Typography sx={{ color: "#e3e3e3" }}>Phone Number</Typography>
-              <Typography sx={{ color: "white" }}>+974 3118 1843</Typography>
-            </Box>
-          </ContactBox>
+          <Stack>
+            <ContactBox>
+              <Box>
+                <Image src={PhoneImg} alt="PhoneImg" height={50} />
+              </Box>
+              <Box>
+                <Typography sx={{ color: "#e3e3e3" }}>Phone Number</Typography>
+                <Typography sx={{ color: "white" }}>+974 3118 1843</Typography>
+              </Box>
+            </ContactBox>
+          </Stack>
 
           <ContactBox>
             <Box>
@@ -65,28 +74,28 @@ function Footer() {
           </ContactBox>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 10 }}>
+        <Box sx={{ display: "flex", gap: 15 }}>
           <Box>
             <Image src={Logo} alt="Logo" width={300} />
           </Box>
-          <Box sx={{ width: "35%", color: "white" }}>
-            <Typography>
+          <Box sx={{ width: "28%", color: "white" }}>
+            <Description>
               Your health, physical and emotional well-being is important to us.
               We are always by your side and have made it even easier for you to
               find the necessary vitamins.
-            </Typography>
+            </Description>
           </Box>
         </Box>
 
         <Box sx={{ display: "flex", gap: 1 }}>
           <Image src={Landicon} alt="location" />
-          <Typography sx={{ color: "white" }}>
+          <Description>
             Elbrit Life Sciences Private Limited. C20, BKC, G Block, Mumbai
             400051
-          </Typography>
+          </Description>
         </Box>
       </Stack>
-    </Stack>
+    </FooterContainer>
   );
 }
 
