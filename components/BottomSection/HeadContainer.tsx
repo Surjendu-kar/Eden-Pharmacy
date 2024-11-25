@@ -4,7 +4,9 @@ import { Stack, styled, Typography } from "@mui/material";
 const Container = styled(Stack)(({ theme }) => ({
   alignItems: "center",
   margin: theme.spacing(5, 0),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    margin: theme.spacing(3, 0),
+  },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
