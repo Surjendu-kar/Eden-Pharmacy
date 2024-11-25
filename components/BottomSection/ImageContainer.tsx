@@ -14,8 +14,10 @@ interface TitleOverlayProps {
 
 const Container = styled(Box)(({ theme }) => ({
   display: "flex",
+  justifyContent: "center",
   flexWrap: "wrap",
   gap: theme.spacing(5),
+  marginBottom: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {},
 }));
 

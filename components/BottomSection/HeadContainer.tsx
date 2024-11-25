@@ -3,7 +3,7 @@ import { Stack, styled, Typography } from "@mui/material";
 
 const Container = styled(Stack)(({ theme }) => ({
   alignItems: "center",
-  margin: theme.spacing(2, 0),
+  margin: theme.spacing(5, 0),
   [theme.breakpoints.down("sm")]: {},
 }));
 

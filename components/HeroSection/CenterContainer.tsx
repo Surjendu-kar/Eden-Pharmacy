@@ -92,11 +92,14 @@ const Description = styled(Typography)(({ theme }) => ({
 const ButtonStyle = styled("button")(({ theme }) => ({
   background: theme.palette.secondary.main,
   color: "white",
-  padding: "10px 20px",
-  borderRadius: "15px",
+  padding: theme.spacing(1, 4),
+  borderRadius: "20px",
   cursor: "pointer",
-  fontSize: "14px",
-  [theme.breakpoints.down("sm")]: { padding: "4px 10px", fontSize: "10px" },
+  fontSize: theme.spacing(1.6),
+  [theme.breakpoints.down("sm")]: {
+    padding: theme.spacing(0.4, 1),
+    fontSize: theme.spacing(1),
+  },
 }));
 
 function CenterContainer() {
@@ -120,7 +123,10 @@ function CenterContainer() {
         >
           Get Your Vitamins & Minerals
         </Title>
-        <ButtonStyle>Explore</ButtonStyle>
+
+        <Box>
+          <ButtonStyle>Explore</ButtonStyle>
+        </Box>
       </LeftContent>
 
       {/* center content */}
