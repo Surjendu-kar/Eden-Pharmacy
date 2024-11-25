@@ -2,10 +2,11 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  spacing: 10,
   typography: {
     fontFamily: `'Jost', sans-serif`,
     htmlFontSize: 10,
-    fontSize: 10, // default font size is 10
+    fontSize: 10,
   },
   palette: {
     primary: {

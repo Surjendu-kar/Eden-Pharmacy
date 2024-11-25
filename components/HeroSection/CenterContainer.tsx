@@ -19,29 +19,29 @@ const LeftContent = styled(Stack)(({ theme }) => ({
 }));
 
 const CenterContent = styled(Stack)(({ theme }) => ({
-  height: "270px",
-  width: "250px",
+  height: theme.spacing(27),
+  width: theme.spacing(27),
   background: "#FFE9B5",
-  borderTopLeftRadius: "90px",
-  borderBottomRightRadius: "90px",
+  borderTopLeftRadius: theme.spacing(9),
+  borderBottomRightRadius: theme.spacing(9),
 
   "& img": {
-    width: "280px",
-    height: "300px",
+    width: theme.spacing(31),
+    height: theme.spacing(36),
     position: "relative",
-    bottom: 70,
-    right: 20,
+    bottom: 80,
+    right: 30,
   },
 
   [theme.breakpoints.down("sm")]: {
-    height: "150px",
-    width: "150px",
-    borderTopLeftRadius: "50px",
-    borderBottomRightRadius: "50px",
+    height: theme.spacing(15),
+    width: theme.spacing(15),
+    borderTopLeftRadius: theme.spacing(5),
+    borderBottomRightRadius: theme.spacing(5),
 
     "& img": {
-      width: "180px",
-      height: "200px",
+      width: theme.spacing(18),
+      height: theme.spacing(20),
       position: "relative",
       bottom: 60,
       right: 20,
@@ -50,15 +50,18 @@ const CenterContent = styled(Stack)(({ theme }) => ({
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
-  width: "27%",
-  gap: theme.spacing(3),
-  [theme.breakpoints.down("sm")]: { gap: theme.spacing(2), width: "30%" },
+  width: "26%",
+  gap: theme.spacing(2),
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1), width: "30%" },
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
-  width: "50px",
-  height: "50px",
-  [theme.breakpoints.down("sm")]: { width: "35px", height: "35px" },
+  width: theme.spacing(6),
+  height: theme.spacing(6),
+  [theme.breakpoints.down("sm")]: {
+    width: theme.spacing(3.5),
+    height: theme.spacing(3.5),
+  },
 }));
 
 const FeatureBox = styled(Box)(({ theme }) => ({
@@ -71,27 +74,28 @@ const FeatureBox = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
-  color: "#003569",
-  fontSize: "18px",
-  fontWeight: "bold",
+  color: theme.palette.secondary.main,
+  fontSize: theme.spacing(2.2),
+  fontWeight: 600,
   [theme.breakpoints.down("sm")]: {
-    fontSize: "12px",
+    fontSize: theme.spacing(1.2),
   },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
-  color: "#727272",
-  fontSize: "11px",
+  color: theme.palette.grey[300],
+  fontSize: theme.spacing(1.4),
 
-  [theme.breakpoints.down("sm")]: { fontSize: "8px" },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(0.8) },
 }));
 
 const ButtonStyle = styled("button")(({ theme }) => ({
-  background: "#17414F",
+  background: theme.palette.secondary.main,
   color: "white",
-  padding: "7px 20px",
+  padding: "10px 20px",
   borderRadius: "15px",
   cursor: "pointer",
+  fontSize: "14px",
   [theme.breakpoints.down("sm")]: { padding: "4px 10px", fontSize: "10px" },
 }));
 
@@ -102,15 +106,16 @@ function CenterContainer() {
       <LeftContent>
         <Description
           sx={{
-            fontSize: { xs: "9px", sm: "13px" },
+            fontSize: { xs: "9px", sm: "20px" },
           }}
         >
           Online Medical Supplies
         </Description>
         <Title
           sx={{
-            lineHeight: { xs: "16px", sm: "20px" }, 
-            fontSize: { xs: "12px", sm: "20px" },
+            lineHeight: { xs: "16px", sm: "30px" },
+            fontSize: { xs: "12px", sm: "28px" },
+            fontWeight: 500,
           }}
         >
           Get Your Vitamins & Minerals

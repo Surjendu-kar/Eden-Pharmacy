@@ -4,20 +4,20 @@ import CenterContainer from "./CenterContainer";
 
 const MainContainer = styled(Stack)(({ theme }) => ({
   background: theme.palette.background.paper,
-  height: "850px",
+  height: theme.spacing(80),
   alignItems: "center",
-  margin: "0.75rem",
+  margin: theme.spacing(0, 1),
 
-  [theme.breakpoints.down("sm")]: { height: "50dvh" },
+  [theme.breakpoints.down("sm")]: { height: theme.spacing(50) },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
-  color: "#003569",
-  fontSize: "6rem",
+  color: theme.palette.primary.main,
+  fontSize: theme.spacing(12),
   fontWeight: 700,
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: "2rem",
+    fontSize: theme.spacing(2),
   },
 }));
 

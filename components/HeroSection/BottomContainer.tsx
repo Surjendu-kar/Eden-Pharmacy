@@ -9,22 +9,22 @@ import MadeInIndiaImg from "@/public/Group-8117.svg.svg";
 import ClinicallyImg from "@/public/Group-8111.svg (1).svg";
 
 const Container = styled(Box)(({ theme }) => ({
-  background: "#17414F",
-  minWidth: "1464px",
-  maxWidth: "1464px",
-  minHeight: "400px",
-  borderRadius: "40px",
-  padding: "40px",
+  background: theme.palette.secondary.main,
+  minWidth: theme.spacing(146.4),
+  maxWidth: theme.spacing(146.4),
+  minHeight: theme.spacing(40),
+  borderRadius: theme.spacing(4),
+  padding: theme.spacing(4),
   display: "flex",
   flexDirection: "column",
   gap: theme.spacing(6),
 
   [theme.breakpoints.down("sm")]: {
-    padding: "20px",
-    borderRadius: "30px",
-    minWidth: "430px",
-    maxWidth: "600px",
-    height: "250px",
+    padding: theme.spacing(2),
+    borderRadius: theme.spacing(3),
+    minWidth: theme.spacing(43),
+    maxWidth: theme.spacing(60),
+    height: theme.spacing(25),
     gap: theme.spacing(3),
   },
 }));
@@ -36,7 +36,7 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
   textAlign: "center",
   gap: theme.spacing(1),
   color: "white",
-  width: "16%",
+  width: "17%",
   position: "relative",
   bottom: 80,
 
@@ -49,40 +49,41 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
 const IconCircle = styled(Box)(({ theme }) => ({
   background: "white",
   borderRadius: "50%",
-  width: "80px",
-  height: "80px",
+  width: theme.spacing(10),
+  height: theme.spacing(10),
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 
   "& img": {
-    width: "30px",
+    width: theme.spacing(3.2),
   },
+
   [theme.breakpoints.down("sm")]: {
-    width: "45px",
-    height: "45px",
+    width: theme.spacing(4.5),
+    height: theme.spacing(4.5),
 
     "& img": {
-      width: "20px",
+      width: theme.spacing(2),
     },
   },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#FFFFF",
-  fontSize: "18px",
-  fontWeight: "bold",
+  fontSize: theme.spacing(2.4),
+
   [theme.breakpoints.down("sm")]: {
-    fontSize: "12px",
+    fontSize: theme.spacing(1.2),
   },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
-  color: "#D9D9D9",
-  fontSize: "12px",
+  color: theme.palette.grey[200],
+  fontSize: theme.spacing(1.4),
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: "8px",
+    fontSize: theme.spacing(0.8),
   },
 }));
 
