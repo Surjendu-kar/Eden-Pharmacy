@@ -1,15 +1,18 @@
+"use client";
 import edenPharmacyImg from "@/public/eden pharmacy.png";
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import Image from "next/image";
+
+const ImageStyle = styled(Image)(({ theme }) => ({
+  width: "200px",
+  height: "60px",
+  [theme.breakpoints.down("sm")]: { width: "150px", height: "45px" },
+}));
+
 function Header() {
   return (
     <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-      <Image
-        src={edenPharmacyImg}
-        alt="edenPharmacyImg"
-        width={200}
-        height={60}
-      />
+      <ImageStyle src={edenPharmacyImg} alt="edenPharmacyImg" />
       <Box></Box>
     </Box>
   );

@@ -15,7 +15,7 @@ const Container = styled(Box)(({ theme }) => ({
 const LeftContent = styled(Stack)(({ theme }) => ({
   width: "25%",
   gap: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1), width: "23%" },
 }));
 
 const CenterContent = styled(Stack)(({ theme }) => ({
@@ -24,27 +24,50 @@ const CenterContent = styled(Stack)(({ theme }) => ({
   background: "#FFE9B5",
   borderTopLeftRadius: "90px",
   borderBottomRightRadius: "90px",
+
+  "& img": {
+    width: "280px",
+    height: "300px",
+    position: "relative",
+    bottom: 70,
+    right: 20,
+  },
+
   [theme.breakpoints.down("sm")]: {
-    height: "200px",
-    width: "180px",
+    height: "150px",
+    width: "150px",
+    borderTopLeftRadius: "50px",
+    borderBottomRightRadius: "50px",
+
+    "& img": {
+      width: "180px",
+      height: "200px",
+      position: "relative",
+      bottom: 60,
+      right: 20,
+    },
   },
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
   width: "27%",
-  [theme.breakpoints.down("sm")]: {},
+  gap: theme.spacing(3),
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(2), width: "30%" },
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
   width: "50px",
-  [theme.breakpoints.down("sm")]: {},
+  height: "50px",
+  [theme.breakpoints.down("sm")]: { width: "35px", height: "35px" },
 }));
 
 const FeatureBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    gap: theme.spacing(1),
+  },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -52,7 +75,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: "18px",
   fontWeight: "bold",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "13px",
+    fontSize: "12px",
   },
 }));
 
@@ -69,7 +92,7 @@ const ButtonStyle = styled("button")(({ theme }) => ({
   padding: "7px 20px",
   borderRadius: "15px",
   cursor: "pointer",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { padding: "4px 10px", fontSize: "10px" },
 }));
 
 function CenterContainer() {
@@ -77,10 +100,19 @@ function CenterContainer() {
     <Container>
       {/* left content */}
       <LeftContent>
-        <Description sx={{ fontSize: "13px" }}>
+        <Description
+          sx={{
+            fontSize: { xs: "9px", sm: "13px" },
+          }}
+        >
           Online Medical Supplies
         </Description>
-        <Title sx={{ lineHeight: "20px", fontSize: "20px" }}>
+        <Title
+          sx={{
+            lineHeight: { xs: "16px", sm: "20px" }, 
+            fontSize: { xs: "12px", sm: "20px" },
+          }}
+        >
           Get Your Vitamins & Minerals
         </Title>
         <ButtonStyle>Explore</ButtonStyle>
@@ -89,13 +121,7 @@ function CenterContainer() {
       {/* center content */}
       <Box width={"30%"}>
         <CenterContent>
-          <Image
-            src={Medicine}
-            alt="Medicine"
-            width={280}
-            height={300}
-            style={{ position: "relative", bottom: 60, right: 15 }}
-          />
+          <Image src={Medicine} alt="Medicine" />
         </CenterContent>
       </Box>
 

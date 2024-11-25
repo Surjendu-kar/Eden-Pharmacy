@@ -21,8 +21,14 @@ const Container = styled(Box)(({ theme }) => ({
   transform: "translate(-50%, 20%)",
   zIndex: 1,
   height: "380px",
+
   [theme.breakpoints.down("sm")]: {
     padding: "20px",
+    bottom: "30%",
+    width: "90%",
+    borderRadius: "30px",
+    height: "250px",
+    gap: theme.spacing(3),
   },
 }));
 
@@ -36,8 +42,10 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
   width: "16%",
   position: "relative",
   bottom: 80,
+
   [theme.breakpoints.down("sm")]: {
     width: "40%",
+    bottom: 60,
   },
 }));
 
@@ -54,8 +62,12 @@ const IconCircle = styled(Box)(({ theme }) => ({
     width: "30px",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "50px",
-    height: "50px",
+    width: "45px",
+    height: "45px",
+
+    "& img": {
+      width: "20px",
+    },
   },
 }));
 
@@ -64,7 +76,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: "18px",
   fontWeight: "bold",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "15px",
+    fontSize: "12px",
   },
 }));
 
@@ -73,7 +85,7 @@ const Description = styled(Typography)(({ theme }) => ({
   fontSize: "12px",
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: "9px",
+    fontSize: "8px",
   },
 }));
 
@@ -82,10 +94,10 @@ function BottomContainer() {
     <Container>
       {/* Top row features */}
       <Stack
-        direction="row"
         justifyContent="space-around"
         alignItems="center"
         width="100%"
+        direction={"row"}
       >
         <BottomFeatureBox>
           <IconCircle>

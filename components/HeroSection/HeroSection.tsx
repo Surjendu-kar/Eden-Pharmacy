@@ -10,7 +10,7 @@ const MainContainer = styled(Stack)(({ theme }) => ({
   margin: "0.75rem",
   // position: "relative",
 
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { height: "50dvh" },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
