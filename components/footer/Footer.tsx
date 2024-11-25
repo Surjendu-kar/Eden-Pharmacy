@@ -8,7 +8,6 @@ import Image from "next/image";
 import Landicon from "@/public/FooterImg/location.svg";
 
 const FooterContainer = styled(Stack)(({ theme }) => ({
-  marginTop: "1rem",
   background: "#17414F",
   padding: "2rem",
   alignItems: "center",

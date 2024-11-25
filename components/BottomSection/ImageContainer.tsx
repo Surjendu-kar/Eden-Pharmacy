@@ -17,7 +17,7 @@ const Container = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   flexWrap: "wrap",
   gap: theme.spacing(5),
-  marginBottom: theme.spacing(2),
+  marginBottom: theme.spacing(3),
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -43,12 +43,12 @@ const ImageWrapper = styled(Box)<ImageWrapperProps>(
 const TitleOverlay = styled(Typography)<TitleOverlayProps>(
   ({ theme, "data-large": large }) => ({
     position: "absolute",
-    top: large === "true" ? "20%" : "40%",
+    top: large === "true" ? "20%" : "45%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: theme.palette.common.white,
     width: "80%",
-    fontSize: "20px",
+    fontSize: theme.spacing(2),
     fontWeight: 700,
     textTransform: "capitalize",
     [theme.breakpoints.down("sm")]: {},
@@ -61,10 +61,10 @@ const DateBadge = styled(Typography)(({ theme }) => ({
   left: "-10px",
   background: "#003569",
   color: "white",
-  padding: "6px 25px",
+  padding: theme.spacing(0.6,2.5),
   borderTopRightRadius: "15px",
   borderBottomRightRadius: "15px",
-  fontSize: "16px",
+  fontSize: theme.spacing(1.6),
   fontWeight: 500,
   textTransform: "uppercase",
   [theme.breakpoints.down("sm")]: {},
