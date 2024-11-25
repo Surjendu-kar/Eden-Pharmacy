@@ -22,6 +22,24 @@ const Container = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   gap: theme.spacing(4),
   justifyContent: "center",
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(4) },
+}));
+
+const Title = styled(Typography)(({ theme }) => ({
+  color: "#17414F",
+  fontSize: "32px",
+  fontWeight: 600,
+  [theme.breakpoints.down("sm")]: { fontSize: "20px" },
+}));
+
+const Description = styled(Typography)(({ theme }) => ({
+  color: "#727272",
+  fontSize: "13px",
+
+  [theme.breakpoints.down("sm")]: { fontSize: "11px" },
+}));
+
+const ImageStyle = styled(Image)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -29,35 +47,31 @@ function MiddleSection() {
   return (
     <MainContainer>
       <Container>
-        <Stack sx={{ width: "38%", gap: 2 }}>
+        <Stack sx={{ width: "38%", gap: { xs: 0, sm: 2 } }}>
           <Typography
             sx={{
               textTransform: "Uppercase",
-              fontSize: "14px",
+              fontSize: { xs: "10px", sm: "14px" },
               color: "#003569",
               fontWeight: 600,
             }}
           >
             Ingredients
           </Typography>
-          <Typography
-            sx={{ color: "#17414F", fontSize: "32px", fontWeight: 600 }}
-          >
-            Better Ingredients
-          </Typography>
+          <Title>Better Ingredients</Title>
 
-          <Typography sx={{ color: "#727272", fontSize: "13px" }}>
+          <Description>
             Only the best when you choose products offered on our platform -
             high-quality ingredients for high quality products!
-          </Typography>
+          </Description>
         </Stack>
 
-        <Image src={Img1} alt="img1" />
-        <Image src={Img2} alt="img1" />
-        <Image src={Img3} alt="img1" />
-        <Image src={Img4} alt="img1" />
-        <Image src={Img5} alt="img1" />
-        <Image src={Img6} alt="img1" />
+        <ImageStyle src={Img1} alt="img1" />
+        <ImageStyle src={Img2} alt="img2" />
+        <ImageStyle src={Img3} alt="img3" />
+        <ImageStyle src={Img4} alt="img4" />
+        <ImageStyle src={Img5} alt="img5" />
+        <ImageStyle src={Img6} alt="img6" />
       </Container>
     </MainContainer>
   );

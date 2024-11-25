@@ -6,11 +6,11 @@ import MiddleSection from "@/components/MiddleSection/MiddleSection";
 import BottomSection from "@/components/BottomSection/BottomSection";
 function Home() {
   return (
-    <Stack sx={{ height: "100vh" }}>
+    <Stack>
       {/* header */}
       <Header />
       {/* main container */}
-      <Stack sx={{ flexGrow: 1 }}>
+      <Stack sx={{ flexGrow: 1, maxWidth: 1930, margin: "0 auto" }}>
         {/* Top Content */}
         <HeroSection />
 

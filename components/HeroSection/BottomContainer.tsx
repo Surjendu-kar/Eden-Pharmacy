@@ -9,7 +9,9 @@ import ClinicallyImg from "@/public/Group-8111.svg (1).svg";
 
 const Container = styled(Box)(({ theme }) => ({
   background: "#17414F",
-  width: "80%",
+  minWidth: "1600px",
+  maxWidth: "1700px",
+  maxHeight: "380px",
   borderRadius: "40px",
   padding: "40px",
   display: "flex",
@@ -20,13 +22,13 @@ const Container = styled(Box)(({ theme }) => ({
   left: "50%",
   transform: "translate(-50%, 20%)",
   zIndex: 1,
-  height: "380px",
 
   [theme.breakpoints.down("sm")]: {
     padding: "20px",
     bottom: "30%",
-    width: "90%",
     borderRadius: "30px",
+    minWidth: "430px",
+    maxWidth: "600px",
     height: "250px",
     gap: theme.spacing(3),
   },
