@@ -15,7 +15,7 @@ const Container = styled(Box)(({ theme }) => ({
 const LeftContent = styled(Stack)(({ theme }) => ({
   width: "25%",
   gap: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1), width: "23%" },
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1), width: "22%" },
 }));
 
 const CenterContent = styled(Stack)(({ theme }) => ({
@@ -35,12 +35,12 @@ const CenterContent = styled(Stack)(({ theme }) => ({
 
   [theme.breakpoints.down("sm")]: {
     height: theme.spacing(15),
-    width: theme.spacing(15),
+    width: theme.spacing(13),
     borderTopLeftRadius: theme.spacing(5),
     borderBottomRightRadius: theme.spacing(5),
 
     "& img": {
-      width: theme.spacing(18),
+      width: theme.spacing(16),
       height: theme.spacing(20),
       position: "relative",
       bottom: 45,
@@ -59,8 +59,8 @@ const ImageStyle = styled(Image)(({ theme }) => ({
   width: theme.spacing(6),
   height: theme.spacing(6),
   [theme.breakpoints.down("sm")]: {
-    width: theme.spacing(3.5),
-    height: theme.spacing(3.5),
+    width: theme.spacing(3),
+    height: theme.spacing(3),
   },
 }));
 

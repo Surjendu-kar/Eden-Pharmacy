@@ -83,8 +83,8 @@ const LogoBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     gap: theme.spacing(1),
     "& img": {
-      width: "180px",
-      height: "50px",
+      width: "150px",
+      height: "40px",
     },
   },
 }));

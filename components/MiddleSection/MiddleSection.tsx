@@ -33,13 +33,13 @@ const Description = styled(Typography)(({ theme }) => ({
   color: "#727272",
   fontSize: theme.spacing(1.6),
 
-  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.1) },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.2) },
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
   width: 130,
   height: 260,
-  [theme.breakpoints.down("sm")]: { width: 80, height: 150 },
+  [theme.breakpoints.down("sm")]: { display: "none" },
 }));
 
 const ImageContainer = styled(Stack)(({ theme }) => ({
@@ -97,24 +97,24 @@ const ImageContainer = styled(Stack)(({ theme }) => ({
   },
 
   [theme.breakpoints.down("sm")]: {
-    minWidth: 200,
-    maxWidth: 200,
-    minHeight: 150,
-    maxHeight: 150,
+    minWidth: 300,
+    maxWidth: 300,
+    minHeight: 200,
+    maxHeight: 200,
 
     "& > .content .title": {
-      fontSize: theme.spacing(1.5),
+      fontSize: theme.spacing(1.8),
       color: theme.palette.secondary.dark,
       fontWeight: 600,
     },
 
     "& > .content .description": {
-      fontSize: theme.spacing(1),
+      fontSize: theme.spacing(1.4),
       color: theme.palette.grey[300],
     },
 
     "& > #action-btn .btn": {
-      fontSize: theme.spacing(1),
+      fontSize: theme.spacing(1.2),
     },
   },
 }));
@@ -123,11 +123,11 @@ function MiddleSection() {
   return (
     <MainContainer>
       <Container>
-        <Stack sx={{ width: { xs: "45%", sm: "38%" }, gap: { xs: 0, sm: 2 } }}>
+        <Stack sx={{ width: { xs: "85%", sm: "38%" }, gap: { xs: 0, sm: 2 } }}>
           <Typography
             sx={{
               textTransform: "Uppercase",
-              fontSize: { xs: "10px", sm: "16px" },
+              fontSize: { xs: "12px", sm: "16px" },
               color: "#003569",
               fontWeight: 600,
             }}

@@ -38,7 +38,7 @@ const ImageWrapper = styled(Box)<ImageWrapperProps>(
       position: "relative !important",
     },
     [theme.breakpoints.down("sm")]: {
-      height: large === "true" ? theme.spacing(25) : theme.spacing(10),
+      height: large === "true" ? theme.spacing(35) : theme.spacing(10),
     },
   })
 );
