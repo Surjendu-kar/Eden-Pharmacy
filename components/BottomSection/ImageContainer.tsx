@@ -25,9 +25,9 @@ const ImageBox = styled(Stack)(({ theme }) => ({
 }));
 
 const ImageWrapper = styled(Box)<ImageWrapperProps>(
-  ({ "data-large": large }) => ({
+  ({ "data-large": large, theme }) => ({
     position: "relative",
-    height: large === "true" ? "400px" : "200px",
+    height: large === "true" ? theme.spacing(50) : theme.spacing(20),
     width: "100%",
     "& > img": {
       objectFit: "cover",
@@ -44,10 +44,10 @@ const TitleOverlay = styled(Typography)<TitleOverlayProps>(
     top: large === "true" ? "20%" : "40%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    color: "white",
+    color: theme.palette.common.white,
     width: "80%",
-    fontSize: "15px",
-    fontWeight: 600,
+    fontSize: "20px",
+    fontWeight: 700,
     textTransform: "capitalize",
     [theme.breakpoints.down("sm")]: {},
   })
@@ -62,7 +62,7 @@ const DateBadge = styled(Typography)(({ theme }) => ({
   padding: "6px 25px",
   borderTopRightRadius: "15px",
   borderBottomRightRadius: "15px",
-  fontSize: "14px",
+  fontSize: "16px",
   fontWeight: 500,
   textTransform: "uppercase",
   [theme.breakpoints.down("sm")]: {},
@@ -123,7 +123,6 @@ function ImageContainer() {
           <TitleOverlay data-large="true">
             the Covid-19 Epidemic In 2023 is Back
           </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
         </ImageWrapper>
       </ImageBox>
 

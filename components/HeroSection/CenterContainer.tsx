@@ -19,14 +19,14 @@ const LeftContent = styled(Stack)(({ theme }) => ({
 }));
 
 const CenterContent = styled(Stack)(({ theme }) => ({
-  height: theme.spacing(27),
-  width: theme.spacing(27),
+  height: theme.spacing(30),
+  width: theme.spacing(29),
   background: "#FFE9B5",
   borderTopLeftRadius: theme.spacing(9),
   borderBottomRightRadius: theme.spacing(9),
 
   "& img": {
-    width: theme.spacing(31),
+    width: theme.spacing(33),
     height: theme.spacing(36),
     position: "relative",
     bottom: 80,

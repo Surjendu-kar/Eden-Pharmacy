@@ -1,13 +1,10 @@
 "use client";
 import { Box, Stack, styled, Typography } from "@mui/material";
 import React from "react";
-import Img1 from "@/public/CenterImages/Vitamin-C.svg";
-import Img2 from "@/public/CenterImages/div.elbzotech-banner-info-wrap (1).svg";
-import Img3 from "@/public/CenterImages/Megnesium.svg";
-import Img4 from "@/public/CenterImages/div.elbzotech-banner-info-wrap.svg";
-import Img5 from "@/public/CenterImages/lactobacillus.svg";
-import Img6 from "@/public/CenterImages/Demo.svg";
+
+import Img6 from "@/public/CenterImages/Demo.webp";
 import Image from "next/image";
+import { Dummy_Ingredients } from "@/data/index";
 
 const MainContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -20,27 +17,84 @@ const Container = styled(Box)(({ theme }) => ({
   display: "flex",
   width: "80%",
   flexWrap: "wrap",
-  gap: theme.spacing(4),
+  gap: theme.spacing(3),
   justifyContent: "center",
-  [theme.breakpoints.down("sm")]: { gap: theme.spacing(4) },
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(2) },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#17414F",
-  fontSize: "40px",
+  fontSize: theme.spacing(4),
   fontWeight: 600,
-  [theme.breakpoints.down("sm")]: { fontSize: "20px" },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(2) },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#727272",
-  fontSize: "16px",
+  fontSize: theme.spacing(1.6),
 
-  [theme.breakpoints.down("sm")]: { fontSize: "11px" },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.1) },
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
+}));
+
+const ImageContainer = styled(Stack)(({ theme }) => ({
+  minWidth: 400,
+  minHeight: 260,
+  borderRadius: theme.spacing(1),
+  position: "relative",
+  overflow: "hidden",
+  color: theme.palette.common.white,
+  padding: theme.spacing(3),
+
+  "& > #action-btn": {
+    flex: 1,
+    display: "flex",
+    alignItems: "flex-end",
+    zIndex: 1,
+  },
+
+  "& > #action-btn .btn": {
+    color: theme.palette.primary.main,
+    fontSize: theme.spacing(1.6),
+    fontWeight: 600,
+    border: "none",
+    borderBottom: `1px solid ${theme.palette.primary.main}`,
+    background: "transparent",
+    cursor: "pointer",
+  },
+
+  "& > .image-overlay": {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+  },
+
+  "& > .content": {
+    position: "relative",
+    zIndex: 1,
+  },
+
+  "& > .content .title": {
+    fontSize: theme.spacing(2.4),
+    color: theme.palette.secondary.dark,
+    fontWeight: 600,
+  },
+
+  "& > .content .description": {
+    fontSize: theme.spacing(1.8),
+    color: theme.palette.grey[300],
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    height: "auto",
+  },
 }));
 
 function MiddleSection() {
@@ -66,12 +120,31 @@ function MiddleSection() {
           </Description>
         </Stack>
 
-        <ImageStyle src={Img1} alt="img1" />
-        <ImageStyle src={Img2} alt="img2" />
-        <ImageStyle src={Img3} alt="img3" />
-        <ImageStyle src={Img4} alt="img4" />
-        <ImageStyle src={Img5} alt="img5" />
-        <ImageStyle src={Img6} alt="img6" />
+        {Dummy_Ingredients.map((ingredient) => (
+          <ImageContainer key={ingredient.id}>
+            <Box className="image-overlay">
+              <Image
+                src={ingredient.img}
+                alt={ingredient.title}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Box>
+
+            <Box className="content">
+              <Typography className="title">{ingredient.title}</Typography>
+              <Typography className="description">
+                {ingredient.description}
+              </Typography>
+            </Box>
+
+            <Box id="action-btn">
+              <button className="btn">{ingredient.buttonText}</button>
+            </Box>
+          </ImageContainer>
+        ))}
+
+        <ImageStyle src={Img6} alt="demo" style={{ width: 130, height: 260 }} />
       </Container>
     </MainContainer>
   );
