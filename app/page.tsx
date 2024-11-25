@@ -4,6 +4,8 @@ import { Box, Stack } from "@mui/material";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import MiddleSection from "@/components/MiddleSection/MiddleSection";
 import BottomSection from "@/components/BottomSection/BottomSection";
+import BottomContainer from "@/components/HeroSection/BottomContainer";
+
 function Home() {
   return (
     <Stack>
@@ -13,8 +15,9 @@ function Home() {
       <Stack sx={{ flexGrow: 1, maxWidth: 1930, margin: "0 auto" }}>
         {/* Top Content */}
         <HeroSection />
+        <BottomContainer />
 
-        <Box sx={{ mt: "18rem" }}></Box>
+        <Box sx={{ mt: "5rem" }}></Box>
         {/* Middle Content */}
         <MiddleSection />
 

@@ -1,3 +1,4 @@
+"use client";
 import { Box, Stack, styled, Typography } from "@mui/material";
 import Image from "next/image";
 import VegetarianFriendlyImg from "@/public/Group-8110.svg.svg";
@@ -9,23 +10,17 @@ import ClinicallyImg from "@/public/Group-8111.svg (1).svg";
 
 const Container = styled(Box)(({ theme }) => ({
   background: "#17414F",
-  minWidth: "1600px",
-  maxWidth: "1700px",
-  maxHeight: "380px",
+  minWidth: "1464px",
+  maxWidth: "1464px",
+  minHeight: "400px",
   borderRadius: "40px",
   padding: "40px",
   display: "flex",
   flexDirection: "column",
   gap: theme.spacing(6),
-  position: "absolute",
-  bottom: "-5%",
-  left: "50%",
-  transform: "translate(-50%, 20%)",
-  zIndex: 1,
 
   [theme.breakpoints.down("sm")]: {
     padding: "20px",
-    bottom: "30%",
     borderRadius: "30px",
     minWidth: "430px",
     maxWidth: "600px",
@@ -93,83 +88,93 @@ const Description = styled(Typography)(({ theme }) => ({
 
 function BottomContainer() {
   return (
-    <Container>
-      {/* Top row features */}
-      <Stack
-        justifyContent="space-around"
-        alignItems="center"
-        width="100%"
-        direction={"row"}
-      >
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={ClinicallyImg} alt="ClinicallyImg" />
-          </IconCircle>
-          <Title>Clinically Studied</Title>
-          <Description>
-            All products that we offer have undergone lab and safety tests
-          </Description>
-        </BottomFeatureBox>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: "-200px",
+      }}
+    >
+      <Container>
+        {/* Top row features */}
+        <Stack
+          justifyContent="space-around"
+          alignItems="center"
+          width="100%"
+          direction={"row"}
+        >
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={ClinicallyImg} alt="ClinicallyImg" />
+            </IconCircle>
+            <Title>Clinically Studied</Title>
+            <Description>
+              All products that we offer have undergone lab and safety tests
+            </Description>
+          </BottomFeatureBox>
 
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={VegetarianFriendlyImg} alt="VegetarianFriendlyImg" />
-          </IconCircle>
-          <Title>Vegetarian Friendly</Title>
-          <Description>
-            We have a wide selection of vegetarian products to meet your needs
-          </Description>
-        </BottomFeatureBox>
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={VegetarianFriendlyImg} alt="VegetarianFriendlyImg" />
+            </IconCircle>
+            <Title>Vegetarian Friendly</Title>
+            <Description>
+              We have a wide selection of vegetarian products to meet your needs
+            </Description>
+          </BottomFeatureBox>
 
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={MadeInIndiaImg} alt="MadeInIndiaImg" />
-          </IconCircle>
-          <Title>Made In India</Title>
-          <Description>
-            Shop local and explore health products made right here in India
-          </Description>
-        </BottomFeatureBox>
-      </Stack>
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={MadeInIndiaImg} alt="MadeInIndiaImg" />
+            </IconCircle>
+            <Title>Made In India</Title>
+            <Description>
+              Shop local and explore health products made right here in India
+            </Description>
+          </BottomFeatureBox>
+        </Stack>
 
-      {/* Bottom row features */}
-      <Stack
-        direction="row"
-        justifyContent="space-around"
-        alignItems="center"
-        width="100%"
-      >
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={FreeShippingImg} alt="FreeShippingImg" />
-          </IconCircle>
-          <Title>Free Shipping</Title>
-          <Description>
-            We deliver to your door with no shipping costs on your orders
-          </Description>
-        </BottomFeatureBox>
+        {/* Bottom row features */}
+        <Stack
+          direction="row"
+          justifyContent="space-around"
+          alignItems="center"
+          width="100%"
+        >
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={FreeShippingImg} alt="FreeShippingImg" />
+            </IconCircle>
+            <Title>Free Shipping</Title>
+            <Description>
+              We deliver to your door with no shipping costs on your orders
+            </Description>
+          </BottomFeatureBox>
 
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={NoRiskImg} alt="NoRiskImg" />
-          </IconCircle>
-          <Title>No Risk</Title>
-          <Description>
-            We ensure that all products are safe and within their use-by date
-          </Description>
-        </BottomFeatureBox>
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={NoRiskImg} alt="NoRiskImg" />
+            </IconCircle>
+            <Title>No Risk</Title>
+            <Description>
+              We ensure that all products are safe and within their use-by date
+            </Description>
+          </BottomFeatureBox>
 
-        <BottomFeatureBox>
-          <IconCircle>
-            <Image src={GMOImg} alt="GMOImg" />
-          </IconCircle>
-          <Title>GMO Free</Title>
-          <Description>
-            Natural, no modified products and derivatives for those who need it
-          </Description>
-        </BottomFeatureBox>
-      </Stack>
-    </Container>
+          <BottomFeatureBox>
+            <IconCircle>
+              <Image src={GMOImg} alt="GMOImg" />
+            </IconCircle>
+            <Title>GMO Free</Title>
+            <Description>
+              Natural, no modified products and derivatives for those who need
+              it
+            </Description>
+          </BottomFeatureBox>
+        </Stack>
+      </Container>
+    </div>
   );
 }
 

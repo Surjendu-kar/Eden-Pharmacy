@@ -1,14 +1,12 @@
 "use client";
 import { Stack, styled, Typography } from "@mui/material";
 import CenterContainer from "./CenterContainer";
-import BottomContainer from "./BottomContainer";
 
 const MainContainer = styled(Stack)(({ theme }) => ({
-  background: "#E2F5FB",
-  height: "80dvh",
+  background: theme.palette.background.paper,
+  height: "850px",
   alignItems: "center",
   margin: "0.75rem",
-  // position: "relative",
 
   [theme.breakpoints.down("sm")]: { height: "50dvh" },
 }));
@@ -17,6 +15,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: "#003569",
   fontSize: "6rem",
   fontWeight: 700,
+
   [theme.breakpoints.down("sm")]: {
     fontSize: "2rem",
   },
@@ -32,7 +31,6 @@ function HeroSection() {
       <CenterContainer />
 
       {/* bottom content */}
-      <BottomContainer />
     </MainContainer>
   );
 }

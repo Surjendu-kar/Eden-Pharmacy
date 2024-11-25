@@ -1,5 +1,5 @@
 "use client";
-import edenPharmacyImg from "@/public/eden pharmacy.png";
+import edenPharmacyImg from "@/public/logo.webp";
 import { Box, styled } from "@mui/material";
 import Image from "next/image";
 

@@ -3,7 +3,7 @@ import { Box, Stack, styled, Typography } from "@mui/material";
 import PhoneImg from "@/public/FooterImg/phone.svg";
 import EmailImg from "@/public/FooterImg/Component-2-1.svg.svg";
 import LocationImg from "@/public/FooterImg/Component-2-2.svg.svg";
-import Logo from "@/public/eden pharmacy.png";
+import Logo from "@/public/logo.webp";
 import Image from "next/image";
 import Landicon from "@/public/FooterImg/location.svg";
 
