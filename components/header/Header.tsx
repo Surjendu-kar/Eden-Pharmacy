@@ -4,9 +4,9 @@ import { Box, styled } from "@mui/material";
 import Image from "next/image";
 
 const ImageStyle = styled(Image)(({ theme }) => ({
-  width: "200px",
-  height: "60px",
-  [theme.breakpoints.down("sm")]: { width: "150px", height: "45px" },
+  width: theme.spacing(20),
+  height: theme.spacing(6),
+  [theme.breakpoints.down("sm")]: { width: theme.spacing(15), height: theme.spacing(4.5) },
 }));
 
 function Header() {

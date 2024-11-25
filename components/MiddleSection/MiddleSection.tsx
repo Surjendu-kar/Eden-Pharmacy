@@ -27,14 +27,14 @@ const Container = styled(Box)(({ theme }) => ({
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#17414F",
-  fontSize: "32px",
+  fontSize: "40px",
   fontWeight: 600,
   [theme.breakpoints.down("sm")]: { fontSize: "20px" },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#727272",
-  fontSize: "13px",
+  fontSize: "16px",
 
   [theme.breakpoints.down("sm")]: { fontSize: "11px" },
 }));
@@ -51,7 +51,7 @@ function MiddleSection() {
           <Typography
             sx={{
               textTransform: "Uppercase",
-              fontSize: { xs: "10px", sm: "14px" },
+              fontSize: { xs: "10px", sm: "16px" },
               color: "#003569",
               fontWeight: 600,
             }}
