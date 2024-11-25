@@ -16,7 +16,7 @@ const Container = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   gap: theme.spacing(6),
   position: "absolute",
-  bottom: "0",
+  bottom: "-5%",
   left: "50%",
   transform: "translate(-50%, 20%)",
   zIndex: 1,
@@ -44,14 +44,14 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
 const IconCircle = styled(Box)(({ theme }) => ({
   background: "white",
   borderRadius: "50%",
-  width: "70px",
-  height: "70px",
+  width: "80px",
+  height: "80px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 
   "& img": {
-    width: "25px",
+    width: "30px",
   },
   [theme.breakpoints.down("sm")]: {
     width: "50px",
@@ -70,7 +70,7 @@ const Title = styled(Typography)(({ theme }) => ({
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#D9D9D9",
-  fontSize: "11px",
+  fontSize: "12px",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "9px",
@@ -89,7 +89,7 @@ function BottomContainer() {
       >
         <BottomFeatureBox>
           <IconCircle>
-            <Image src={ClinicallyImg} alt="ClinicallyImg"></Image>
+            <Image src={ClinicallyImg} alt="ClinicallyImg" />
           </IconCircle>
           <Title>Clinically Studied</Title>
           <Description>
@@ -109,7 +109,7 @@ function BottomContainer() {
 
         <BottomFeatureBox>
           <IconCircle>
-            <Image src={MadeInIndiaImg} alt="MadeInIndiaImg"></Image>
+            <Image src={MadeInIndiaImg} alt="MadeInIndiaImg" />
           </IconCircle>
           <Title>Made In India</Title>
           <Description>
@@ -127,7 +127,7 @@ function BottomContainer() {
       >
         <BottomFeatureBox>
           <IconCircle>
-            <Image src={FreeShippingImg} alt="FreeShippingImg"></Image>
+            <Image src={FreeShippingImg} alt="FreeShippingImg" />
           </IconCircle>
           <Title>Free Shipping</Title>
           <Description>
@@ -137,7 +137,7 @@ function BottomContainer() {
 
         <BottomFeatureBox>
           <IconCircle>
-            <Image src={NoRiskImg} alt="NoRiskImg"></Image>
+            <Image src={NoRiskImg} alt="NoRiskImg" />
           </IconCircle>
           <Title>No Risk</Title>
           <Description>
@@ -147,7 +147,7 @@ function BottomContainer() {
 
         <BottomFeatureBox>
           <IconCircle>
-            <Image src={GMOImg} alt="GMOImg"></Image>
+            <Image src={GMOImg} alt="GMOImg" />
           </IconCircle>
           <Title>GMO Free</Title>
           <Description>

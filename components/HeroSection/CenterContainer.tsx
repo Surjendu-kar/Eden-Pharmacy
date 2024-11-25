@@ -31,25 +31,25 @@ const CenterContent = styled(Stack)(({ theme }) => ({
 }));
 
 const RightContent = styled(Stack)(({ theme }) => ({
-  width: "28%",
+  width: "27%",
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
-  width: "45px",
+  width: "50px",
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const FeatureBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  gap: theme.spacing(1),
+  gap: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: "#003569",
-  fontSize: "17px",
+  fontSize: "18px",
   fontWeight: "bold",
   [theme.breakpoints.down("sm")]: {
     fontSize: "13px",
@@ -58,7 +58,7 @@ const Title = styled(Typography)(({ theme }) => ({
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#727272",
-  fontSize: "10px",
+  fontSize: "11px",
 
   [theme.breakpoints.down("sm")]: { fontSize: "8px" },
 }));
@@ -93,7 +93,7 @@ function CenterContainer() {
             src={Medicine}
             alt="Medicine"
             width={280}
-            height={290}
+            height={300}
             style={{ position: "relative", bottom: 60, right: 15 }}
           />
         </CenterContent>

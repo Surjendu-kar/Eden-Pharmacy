@@ -7,8 +7,8 @@ function Header() {
       <Image
         src={edenPharmacyImg}
         alt="edenPharmacyImg"
-        width={150}
-        height={50}
+        width={200}
+        height={60}
       />
       <Box></Box>
     </Box>

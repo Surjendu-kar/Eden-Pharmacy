@@ -15,7 +15,7 @@ const MainContainer = styled(Stack)(({ theme }) => ({
 
 const Heading = styled(Typography)(({ theme }) => ({
   color: "#003569",
-  fontSize: "5rem",
+  fontSize: "6rem",
   fontWeight: 700,
   [theme.breakpoints.down("sm")]: {
     fontSize: "2rem",
