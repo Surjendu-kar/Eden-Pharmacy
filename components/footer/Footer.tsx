@@ -8,10 +8,9 @@ import Image from "next/image";
 import Landicon from "@/public/FooterImg/location.svg";
 
 const FooterContainer = styled(Stack)(({ theme }) => ({
-  background: "#17414F",
-  padding: "2rem",
+  background: theme.palette.secondary.main,
+  padding: theme.spacing(3.2),
   alignItems: "center",
-  justifyContent: "center",
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -19,11 +18,12 @@ const ContactBox = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: theme.spacing(4),
   alignItems: "center",
-  background: "#215D72",
-  padding: "1rem 6rem",
-  borderRadius: "15px",
+  background: theme.palette.secondary.light,
+  padding: theme.spacing(1.6, 11.5, 1.6, 7),
+
+  borderRadius: theme.spacing(1.5),
   [theme.breakpoints.down("sm")]: {
-    padding: "0.5rem 1rem",
+    padding: theme.spacing(0.8, 1.6),
   },
 }));
 
@@ -32,14 +32,17 @@ const Contact = styled(Box)(({ theme }) => ({
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
-  color: "#e3e3e3",
-  fontSize: "15px",
+  color: theme.palette.common.white,
+  fontSize: theme.spacing(1.9),
+  fontWeight: 400,
   [theme.breakpoints.down("sm")]: {},
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
-  color: "white",
-  fontSize: "16px",
+  color: theme.palette.common.white,
+  fontSize: theme.spacing(1.9),
+  fontWeight: 500,
+
   [theme.breakpoints.down("sm")]: {},
 }));
 
@@ -52,7 +55,7 @@ const Description = styled(Typography)(({ theme }) => ({
 function Footer() {
   return (
     <FooterContainer>
-      <Stack sx={{ gap: 4, width: "75%" }}>
+      <Stack sx={{ gap: 4, width: "80%" }}>
         <Box sx={{ display: "flex ", justifyContent: "center", gap: 3 }}>
           <Stack>
             <ContactBox>
