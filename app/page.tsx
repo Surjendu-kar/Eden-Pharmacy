@@ -17,7 +17,7 @@ function Home() {
         <HeroSection />
         <BottomContainer />
 
-        <Box sx={{ mt: "5rem" }}></Box>
+        <Box sx={{ mt: { xs: "3rem", sm: "5rem" } }} />
         {/* Middle Content */}
         <MiddleSection />
 

@@ -18,12 +18,12 @@ const Container = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   gap: theme.spacing(5),
   marginBottom: theme.spacing(3),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1) },
 }));
 
 const ImageBox = styled(Stack)(({ theme }) => ({
   gap: theme.spacing(2),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1) },
 }));
 
 const ImageWrapper = styled(Box)<ImageWrapperProps>(
@@ -36,6 +36,9 @@ const ImageWrapper = styled(Box)<ImageWrapperProps>(
       width: "100% !important",
       height: "100% !important",
       position: "relative !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: large === "true" ? theme.spacing(25) : theme.spacing(10),
     },
   })
 );
@@ -51,7 +54,10 @@ const TitleOverlay = styled(Typography)<TitleOverlayProps>(
     fontSize: theme.spacing(2),
     fontWeight: 700,
     textTransform: "capitalize",
-    [theme.breakpoints.down("sm")]: {},
+    [theme.breakpoints.down("sm")]: {
+      fontSize: theme.spacing(1.3),
+      top: large === "true" ? "25%" : "65%",
+    },
   })
 );
 
@@ -67,7 +73,9 @@ const DateBadge = styled(Typography)(({ theme }) => ({
   fontSize: theme.spacing(1.6),
   fontWeight: 500,
   textTransform: "uppercase",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    fontSize: theme.spacing(1),
+  },
 }));
 
 function ImageContainer() {

@@ -19,7 +19,7 @@ const Container = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   gap: theme.spacing(3),
   justifyContent: "center",
-  [theme.breakpoints.down("sm")]: { gap: theme.spacing(2) },
+  [theme.breakpoints.down("sm")]: { gap: theme.spacing(1), width: "90%" },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -37,12 +37,17 @@ const Description = styled(Typography)(({ theme }) => ({
 }));
 
 const ImageStyle = styled(Image)(({ theme }) => ({
-  [theme.breakpoints.down("sm")]: {},
+  width: 130,
+  height: 260,
+  [theme.breakpoints.down("sm")]: { width: 80, height: 150 },
 }));
 
 const ImageContainer = styled(Stack)(({ theme }) => ({
   minWidth: 400,
+  maxWidth: 400,
   minHeight: 260,
+  maxHeight: 260,
+
   borderRadius: theme.spacing(1),
   position: "relative",
   overflow: "hidden",
@@ -92,8 +97,25 @@ const ImageContainer = styled(Stack)(({ theme }) => ({
   },
 
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    height: "auto",
+    minWidth: 200,
+    maxWidth: 200,
+    minHeight: 150,
+    maxHeight: 150,
+
+    "& > .content .title": {
+      fontSize: theme.spacing(1.5),
+      color: theme.palette.secondary.dark,
+      fontWeight: 600,
+    },
+
+    "& > .content .description": {
+      fontSize: theme.spacing(1),
+      color: theme.palette.grey[300],
+    },
+
+    "& > #action-btn .btn": {
+      fontSize: theme.spacing(1),
+    },
   },
 }));
 
@@ -101,7 +123,7 @@ function MiddleSection() {
   return (
     <MainContainer>
       <Container>
-        <Stack sx={{ width: "38%", gap: { xs: 0, sm: 2 } }}>
+        <Stack sx={{ width: { xs: "45%", sm: "38%" }, gap: { xs: 0, sm: 2 } }}>
           <Typography
             sx={{
               textTransform: "Uppercase",
@@ -144,7 +166,7 @@ function MiddleSection() {
           </ImageContainer>
         ))}
 
-        <ImageStyle src={Img6} alt="demo" style={{ width: 130, height: 260 }} />
+        <ImageStyle src={Img6} alt="demo" />
       </Container>
     </MainContainer>
   );

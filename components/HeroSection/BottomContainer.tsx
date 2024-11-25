@@ -8,6 +8,17 @@ import GMOImg from "@/public/Group-8116.svg.svg";
 import MadeInIndiaImg from "@/public/Group-8117.svg.svg";
 import ClinicallyImg from "@/public/Group-8111.svg (1).svg";
 
+const MainContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: theme.spacing(-20),
+
+  [theme.breakpoints.down("sm")]: {
+    marginTop: theme.spacing(-10),
+  },
+}));
+
 const Container = styled(Box)(({ theme }) => ({
   background: theme.palette.secondary.main,
   minWidth: theme.spacing(146.4),
@@ -22,9 +33,10 @@ const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
     borderRadius: theme.spacing(3),
-    minWidth: theme.spacing(43),
-    maxWidth: theme.spacing(60),
-    height: theme.spacing(25),
+    minWidth: theme.spacing(45),
+    maxWidth: theme.spacing(45),
+    minHeight: theme.spacing(25),
+    maxHeight: theme.spacing(25),
     gap: theme.spacing(3),
   },
 }));
@@ -42,7 +54,7 @@ const BottomFeatureBox = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.down("sm")]: {
     width: "40%",
-    bottom: 60,
+    bottom: 45,
   },
 }));
 
@@ -89,14 +101,7 @@ const Description = styled(Typography)(({ theme }) => ({
 
 function BottomContainer() {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "-200px",
-      }}
-    >
+    <MainContainer>
       <Container>
         {/* Top row features */}
         <Stack
@@ -175,7 +180,7 @@ function BottomContainer() {
           </BottomFeatureBox>
         </Stack>
       </Container>
-    </div>
+    </MainContainer>
   );
 }
 

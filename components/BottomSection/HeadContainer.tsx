@@ -12,14 +12,14 @@ const Heading = styled(Typography)(({ theme }) => ({
   textTransform: "uppercase",
   fontWeight: 600,
   fontSize: theme.spacing(1.4),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.4) },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.main,
   fontWeight: 600,
   fontSize: theme.spacing(4),
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(3) },
 }));
 
 function HeadContainer() {

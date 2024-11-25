@@ -11,7 +11,9 @@ const FooterContainer = styled(Stack)(({ theme }) => ({
   background: theme.palette.secondary.main,
   padding: theme.spacing(3.2),
   alignItems: "center",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    padding: theme.spacing(3, 0),
+  },
 }));
 
 const ContactBox = styled(Box)(({ theme }) => ({
@@ -19,11 +21,25 @@ const ContactBox = styled(Box)(({ theme }) => ({
   gap: theme.spacing(4),
   alignItems: "center",
   background: theme.palette.secondary.light,
-  padding: theme.spacing(1.6, 11.5, 1.6, 7),
+  padding: theme.spacing(1.6, 9, 1.6, 7),
 
   borderRadius: theme.spacing(1.5),
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(0.8, 1.6),
+    padding: theme.spacing(0),
+    gap: theme.spacing(0),
+    minWidth: "180px",
+    minHeight: "60px",
+  },
+}));
+
+const ImageBox = styled(Box)(({ theme }) => ({
+  "& > img": {
+    height: "50px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    "& > img": {
+      height: "30px",
+    },
   },
 }));
 
@@ -35,7 +51,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontSize: theme.spacing(1.9),
   fontWeight: 400,
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1) },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -43,7 +59,7 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: theme.spacing(1.9),
   fontWeight: 500,
 
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1) },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
@@ -56,12 +72,19 @@ function Footer() {
   return (
     <FooterContainer>
       <Stack sx={{ gap: 4, width: "80%" }}>
-        <Box sx={{ display: "flex ", justifyContent: "center", gap: 3 }}>
+        <Box
+          sx={{
+            display: "flex ",
+            justifyContent: "center",
+            gap: { xs: 1, sm: 3 },
+            flexWrap: "wrap",
+          }}
+        >
           <Stack>
             <ContactBox>
-              <Box>
-                <Image src={PhoneImg} alt="PhoneImg" height={50} />
-              </Box>
+              <ImageBox>
+                <Image src={PhoneImg} alt="PhoneImg" />
+              </ImageBox>
               <Contact>
                 <Heading>Phone Number</Heading>
                 <Title>+974 3118 1843</Title>
@@ -70,9 +93,9 @@ function Footer() {
           </Stack>
 
           <ContactBox>
-            <Box>
-              <Image src={EmailImg} alt="EmailImg" height={50} />
-            </Box>
+            <ImageBox>
+              <Image src={EmailImg} alt="EmailImg" />
+            </ImageBox>
             <Contact>
               <Heading>Email Address</Heading>
               <Title>Elbrithcqhr@gmail.com</Title>
@@ -80,9 +103,9 @@ function Footer() {
           </ContactBox>
 
           <ContactBox>
-            <Box>
-              <Image src={LocationImg} alt="LocationImg" height={50} />
-            </Box>
+            <ImageBox>
+              <Image src={LocationImg} alt="LocationImg" />
+            </ImageBox>
             <Contact>
               <Heading>Office Location</Heading>
               <Title>Ambassador Street, Zone 61,</Title>
@@ -90,11 +113,11 @@ function Footer() {
           </ContactBox>
         </Box>
 
-        <Box sx={{ display: "flex", gap: 15 }}>
+        <Box sx={{ display: "flex", gap: { xs: 1, sm: 15 }, flexWrap: "wrap" }}>
           <Box>
             <Image src={Logo} alt="Logo" width={300} />
           </Box>
-          <Box sx={{ width: "28%", color: "white" }}>
+          <Box sx={{ width: { xs: "100%", sm: "28%" }, color: "white" }}>
             <Description>
               Your health, physical and emotional well-being is important to us.
               We are always by your side and have made it even easier for you to

@@ -43,7 +43,7 @@ const CenterContent = styled(Stack)(({ theme }) => ({
       width: theme.spacing(18),
       height: theme.spacing(20),
       position: "relative",
-      bottom: 60,
+      bottom: 45,
       right: 20,
     },
   },
