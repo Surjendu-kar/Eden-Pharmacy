@@ -8,7 +8,7 @@ const MainContainer = styled(Stack)(({ theme }) => ({
   alignItems: "center",
   margin: theme.spacing(0, 1),
 
-  [theme.breakpoints.down("sm")]: { height: theme.spacing(40) },
+  [theme.breakpoints.down("sm")]: { height: theme.spacing(45) },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({

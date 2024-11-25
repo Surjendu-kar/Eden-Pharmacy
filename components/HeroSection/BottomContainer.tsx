@@ -33,8 +33,8 @@ const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
     borderRadius: theme.spacing(3),
-    minWidth: theme.spacing(45),
-    maxWidth: theme.spacing(45),
+    minWidth: theme.spacing(42),
+    maxWidth: theme.spacing(42),
     minHeight: theme.spacing(25),
     maxHeight: theme.spacing(25),
     gap: theme.spacing(3),

@@ -27,7 +27,7 @@ const ContactBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(0),
     gap: theme.spacing(0),
-    minWidth: "180px",
+    minWidth: "250px",
     minHeight: "60px",
   },
 }));
@@ -51,7 +51,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontSize: theme.spacing(1.9),
   fontWeight: 400,
-  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1) },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.2) },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -59,19 +59,40 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: theme.spacing(1.9),
   fontWeight: 500,
 
-  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1) },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.2) },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#e3e3e3",
-  fontSize: "14px",
-  [theme.breakpoints.down("sm")]: {},
+  fontSize: theme.spacing(1.4),
+  [theme.breakpoints.down("sm")]: {
+    fontSize: theme.spacing(1.2),
+  },
+}));
+
+const LogoBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: theme.spacing(15),
+  flexWrap: "wrap",
+
+  "& img": {
+    width: "300px",
+    height: "80px",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    gap: theme.spacing(1),
+    "& img": {
+      width: "180px",
+      height: "50px",
+    },
+  },
 }));
 
 function Footer() {
   return (
     <FooterContainer>
-      <Stack sx={{ gap: 4, width: "80%" }}>
+      <Stack sx={{ gap: { xs: 2, sm: 4 }, width: { xs: "90%", sm: "80%" } }}>
         <Box
           sx={{
             display: "flex ",
@@ -113,9 +134,9 @@ function Footer() {
           </ContactBox>
         </Box>
 
-        <Box sx={{ display: "flex", gap: { xs: 1, sm: 15 }, flexWrap: "wrap" }}>
+        <LogoBox>
           <Box>
-            <Image src={Logo} alt="Logo" width={300} />
+            <Image src={Logo} alt="Logo" />
           </Box>
           <Box sx={{ width: { xs: "100%", sm: "28%" }, color: "white" }}>
             <Description>
@@ -124,7 +145,7 @@ function Footer() {
               find the necessary vitamins.
             </Description>
           </Box>
-        </Box>
+        </LogoBox>
 
         <Box sx={{ display: "flex", gap: 1 }}>
           <Image src={Landicon} alt="location" />
