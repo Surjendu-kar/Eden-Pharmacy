@@ -29,16 +29,17 @@ const ImageBox = styled(Stack)(({ theme }) => ({
 const ImageWrapper = styled(Box)<ImageWrapperProps>(
   ({ "data-large": large, theme }) => ({
     position: "relative",
-    height: large === "true" ? theme.spacing(50) : theme.spacing(20),
+    height: large === "true" ? theme.spacing(50) : theme.spacing(24),
     width: "100%",
     "& > img": {
       objectFit: "cover",
+      objectPosition: large === "true" ? "center" : "top",
       width: "100% !important",
       height: "100% !important",
       position: "relative !important",
     },
     [theme.breakpoints.down("sm")]: {
-      height: large === "true" ? theme.spacing(35) : theme.spacing(10),
+      height: large === "true" ? theme.spacing(38) : theme.spacing(18),
     },
   })
 );
@@ -46,7 +47,7 @@ const ImageWrapper = styled(Box)<ImageWrapperProps>(
 const TitleOverlay = styled(Typography)<TitleOverlayProps>(
   ({ theme, "data-large": large }) => ({
     position: "absolute",
-    top: large === "true" ? "20%" : "45%",
+    top: large === "true" ? "20%" : "40%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: theme.palette.common.white,
@@ -55,8 +56,8 @@ const TitleOverlay = styled(Typography)<TitleOverlayProps>(
     fontWeight: 700,
     textTransform: "capitalize",
     [theme.breakpoints.down("sm")]: {
-      fontSize: theme.spacing(1.3),
-      top: large === "true" ? "25%" : "65%",
+      fontSize: theme.spacing(1.5),
+      top: large === "true" ? "20%" : "45%",
     },
   })
 );
@@ -74,7 +75,7 @@ const DateBadge = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
   textTransform: "uppercase",
   [theme.breakpoints.down("sm")]: {
-    fontSize: theme.spacing(1),
+    fontSize: theme.spacing(1.2),
   },
 }));
 

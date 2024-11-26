@@ -66,7 +66,7 @@ const RightContent = styled(Stack)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     gap: theme.spacing(1),
     width: "100%",
-    margin: theme.spacing(3, 0),
+    margin: theme.spacing(5, 0),
   },
 }));
 
