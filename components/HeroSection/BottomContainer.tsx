@@ -1,12 +1,12 @@
 "use client";
 import { Box, Stack, styled, Typography } from "@mui/material";
 import Image from "next/image";
-import VegetarianFriendlyImg from "@/public/Group-8110.svg.svg";
-import FreeShippingImg from "@/public/Group-8114.svg.svg";
-import NoRiskImg from "@/public/Group-8115.svg.svg";
-import GMOImg from "@/public/Group-8116.svg.svg";
-import MadeInIndiaImg from "@/public/Group-8117.svg.svg";
-import ClinicallyImg from "@/public/Group-8111.svg (1).svg";
+import VegetarianFriendlyImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8110.svg.svg";
+import FreeShippingImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8114.svg.svg";
+import NoRiskImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8115.svg.svg";
+import GMOImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8116.svg.svg";
+import MadeInIndiaImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8117.svg.svg";
+import ClinicallyImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8111.svg (1).svg";
 
 const MainContainer = styled(Box)(({ theme }) => ({
   display: "flex",

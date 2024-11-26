@@ -1,9 +1,9 @@
 import { Box, Stack, styled, Typography } from "@mui/material";
 import Image from "next/image";
-import Medicine from "@/public/medicine.png";
-import Frame1 from "@/public/Frame-1.svg";
-import Frame2 from "@/public/Frame-2.svg";
-import Frame3 from "@/public/Frame-3.svg";
+import Medicine from "@/public/HeroSectionImages/medicine.png";
+import Frame1 from "@/public/HeroSectionImages/Frame-1.svg";
+import Frame2 from "@/public/HeroSectionImages/Frame-2.svg";
+import Frame3 from "@/public/HeroSectionImages/Frame-3.svg";
 
 const Container = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -111,9 +111,15 @@ const ButtonStyle = styled("button")(({ theme }) => ({
   borderRadius: "20px",
   cursor: "pointer",
   fontSize: theme.spacing(1.6),
+  transition: "all 0.3s ease",
+
+  "&:hover": {
+    transform: "translateY(-2px)",
+    boxShadow: "0 5px 8px rgba(0, 0, 0, 0.1)",
+  },
 
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(0.5, 4),
+    padding: theme.spacing(0.75, 4),
     fontSize: theme.spacing(1.4),
   },
 }));

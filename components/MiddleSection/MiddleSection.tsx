@@ -69,6 +69,12 @@ const ImageContainer = styled(Stack)(({ theme }) => ({
     borderBottom: `1px solid ${theme.palette.primary.main}`,
     background: "transparent",
     cursor: "pointer",
+    transition: "all 0.3s ease",
+
+    "&:hover": {
+      transform: "translateY(-2px)",
+      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    },
   },
 
   "& > .image-overlay": {

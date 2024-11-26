@@ -1,7 +1,7 @@
 import { Box, Stack, styled, Typography } from "@mui/material";
 import React from "react";
-import Img1 from "@/public/BottomImages/blog1-450x580.jpg.svg";
-import Img2 from "@/public/BottomImages/blog2-450x580.jpg.svg";
+import Img1 from "@/public/BottomImages/blog1-450x580.jpg.webp";
+import Img2 from "@/public/BottomImages/blog2-450x580.jpg.webp";
 import Image from "next/image";
 
 interface ImageWrapperProps {

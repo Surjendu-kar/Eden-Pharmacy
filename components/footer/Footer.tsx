@@ -51,7 +51,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontSize: theme.spacing(1.9),
   fontWeight: 400,
-  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.2) },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.3) },
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -59,14 +59,14 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: theme.spacing(1.9),
   fontWeight: 500,
 
-  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.2) },
+  [theme.breakpoints.down("sm")]: { fontSize: theme.spacing(1.3) },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: "#e3e3e3",
   fontSize: theme.spacing(1.4),
   [theme.breakpoints.down("sm")]: {
-    fontSize: theme.spacing(1.2),
+    fontSize: theme.spacing(1.3),
   },
 }));
 
@@ -81,10 +81,11 @@ const LogoBox = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.down("sm")]: {
+    justifyContent: "center",
     gap: theme.spacing(1),
     "& img": {
-      width: "150px",
-      height: "40px",
+      width: "230px",
+      height: "55px",
     },
   },
 }));
