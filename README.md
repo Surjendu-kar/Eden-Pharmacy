@@ -84,7 +84,7 @@ Essential Vitamins is a modern e-commerce platform built with Next.js, TypeScrip
 
 Our commitment to performance is reflected in our excellent Page Speed Insights scores:
 
-![Page Speed Insights Score](https://i.ibb.co/4FnmZDP/Screenshot-2024-11-27-133335.png)
+![Page Speed Insights Score](https://i.ibb.co/mX0BxG2/Screenshot-2024-11-27-151823.png)
 
 The platform achieves outstanding performance metrics across all key areas:
 
