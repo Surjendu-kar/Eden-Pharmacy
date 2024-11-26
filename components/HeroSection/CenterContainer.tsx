@@ -155,7 +155,7 @@ function CenterContainer() {
       {/* center content */}
       <Box>
         <CenterContent>
-          <Image src={Medicine} alt="Medicine" />
+          <Image src={Medicine} alt="Medicine" quality={1} />
         </CenterContent>
       </Box>
 
@@ -163,7 +163,7 @@ function CenterContainer() {
       <RightContent>
         <FeatureBox>
           <Box>
-            <ImageStyle src={Frame1} alt="VegetarianFriendlyImg" />
+            <ImageStyle src={Frame1} alt="VegetarianFriendlyImg" quality={10} />
           </Box>
           <Box>
             <Title>Vitamins</Title>
@@ -175,7 +175,7 @@ function CenterContainer() {
 
         <FeatureBox>
           <Box>
-            <ImageStyle src={Frame2} alt="" />
+            <ImageStyle src={Frame2} alt="" quality={10} />
           </Box>
           <Box>
             <Title>Weight Loss</Title>
@@ -187,7 +187,7 @@ function CenterContainer() {
 
         <FeatureBox>
           <Box>
-            <ImageStyle src={Frame3} alt="" />
+            <ImageStyle src={Frame3} alt="" quality={10} />
           </Box>
           <Box>
             <Title>Functional Foods</Title>

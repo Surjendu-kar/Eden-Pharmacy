@@ -96,6 +96,7 @@ function ImageContainer() {
                 loading={"lazy"}
                 placeholder="blur"
                 style={{ borderRadius: "15px" }}
+                quality={30}
               />
               <TitleOverlay data-large={image.isLarge.toString()}>
                 {image.title}

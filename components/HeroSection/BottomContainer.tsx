@@ -107,7 +107,7 @@ function BottomContainer() {
             <Grid item xs={6} md={4} key={index}>
               <FeatureBox>
                 <IconCircle>
-                  <Image src={feature.icon} alt={feature.title} />
+                  <Image src={feature.icon} alt={feature.title} quality={10}/>
                 </IconCircle>
                 <Title>{feature.title}</Title>
                 <Description>{feature.description}</Description>

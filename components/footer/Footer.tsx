@@ -137,7 +137,7 @@ function Footer() {
 
         <LogoBox>
           <Box>
-            <Image src={Logo} alt="Logo" />
+            <Image src={Logo} alt="Logo" quality={10} />
           </Box>
           <Box sx={{ width: { xs: "100%", sm: "28%" }, color: "white" }}>
             <Description>

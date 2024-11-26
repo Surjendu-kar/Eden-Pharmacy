@@ -157,6 +157,7 @@ function MiddleSection() {
                 style={{ objectFit: "cover" }}
                 loading={"lazy"}
                 placeholder="blur"
+                quality={10}
               />
             </Box>
 

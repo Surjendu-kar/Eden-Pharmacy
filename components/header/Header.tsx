@@ -20,7 +20,7 @@ function Header() {
         justifyContent: { xs: "space-between", sm: "space-around" },
       }}
     >
-      <ImageStyle src={edenPharmacyImg} alt="edenPharmacyImg" />
+      <ImageStyle src={edenPharmacyImg} alt="edenPharmacyImg" quality={10} />
       <Box></Box>
     </Box>
   );
