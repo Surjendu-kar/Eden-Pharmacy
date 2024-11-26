@@ -28,8 +28,8 @@ const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
     borderRadius: theme.spacing(3),
-    minWidth: theme.spacing(38),
-    maxWidth: theme.spacing(38),
+    minWidth: theme.spacing(34),
+    maxWidth: theme.spacing(34),
     minHeight: theme.spacing(26),
   },
 }));
@@ -42,7 +42,7 @@ const FeatureBox = styled(Box)(({ theme }) => ({
   gap: theme.spacing(1),
   color: "white",
   position: "relative",
-  bottom: theme.spacing(7),
+  bottom: theme.spacing(10),
 
   [theme.breakpoints.down("sm")]: {
     bottom: theme.spacing(5),
@@ -86,7 +86,7 @@ const Description = styled(Typography)(({ theme }) => ({
   fontSize: theme.spacing(1.6),
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: theme.spacing(1.1),
+    fontSize: theme.spacing(1),
   },
 }));
 
@@ -96,10 +96,10 @@ function BottomContainer() {
       <Container>
         <Grid
           container
-          spacing={4}
+          spacing={1}
           sx={{
             ".MuiGrid-item": {
-              padding: { xs: "40px 0px 0px 40px", sm: "10px 100px 50px" },
+              padding: { xs: "20px 5px 0px 5px", sm: "10px 100px 50px" },
             },
           }}
         >
