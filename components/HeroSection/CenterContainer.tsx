@@ -114,13 +114,14 @@ const ButtonStyle = styled("button")(({ theme }) => ({
   transition: "all 0.3s ease",
 
   "&:hover": {
-    transform: "translateY(-2px)",
+    transform: "translateY(-3px)",
     boxShadow: "0 5px 8px rgba(0, 0, 0, 0.1)",
   },
 
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(0.75, 4),
     fontSize: theme.spacing(1.4),
+    marginTop: theme.spacing(0.8),
   },
 }));
 
@@ -131,7 +132,7 @@ function CenterContainer() {
       <LeftContent>
         <Description
           sx={{
-            fontSize: { xs: "18px", sm: "20px" },
+            fontSize: { xs: "16px", sm: "20px" },
           }}
         >
           Online Medical Supplies

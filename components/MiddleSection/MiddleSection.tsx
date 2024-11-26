@@ -72,8 +72,7 @@ const ImageContainer = styled(Stack)(({ theme }) => ({
     transition: "all 0.3s ease",
 
     "&:hover": {
-      transform: "translateY(-2px)",
-      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+      transform: "translateY(-3px)",
     },
   },
 

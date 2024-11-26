@@ -84,8 +84,8 @@ const LogoBox = styled(Box)(({ theme }) => ({
     justifyContent: "center",
     gap: theme.spacing(1),
     "& img": {
-      width: "230px",
-      height: "55px",
+      width: "150px",
+      height: "40px",
     },
   },
 }));

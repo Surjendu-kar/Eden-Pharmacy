@@ -1,12 +1,7 @@
 "use client";
-import { Box, Stack, styled, Typography } from "@mui/material";
+import { features } from "@/data";
+import { Box, Grid, styled, Typography } from "@mui/material";
 import Image from "next/image";
-import VegetarianFriendlyImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8110.svg.svg";
-import FreeShippingImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8114.svg.svg";
-import NoRiskImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8115.svg.svg";
-import GMOImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8116.svg.svg";
-import MadeInIndiaImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8117.svg.svg";
-import ClinicallyImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8111.svg (1).svg";
 
 const MainContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -23,12 +18,12 @@ const Container = styled(Box)(({ theme }) => ({
   background: theme.palette.secondary.main,
   minWidth: theme.spacing(146.4),
   maxWidth: theme.spacing(146.4),
-  minHeight: theme.spacing(40),
+  minHeight: theme.spacing(50),
+  maxHeight: theme.spacing(50),
+
   borderRadius: theme.spacing(4),
-  padding: theme.spacing(4),
-  display: "flex",
-  flexDirection: "column",
-  gap: theme.spacing(6),
+  padding: theme.spacing(5),
+  position: "relative",
 
   [theme.breakpoints.down("sm")]: {
     padding: theme.spacing(2),
@@ -36,25 +31,21 @@ const Container = styled(Box)(({ theme }) => ({
     minWidth: theme.spacing(38),
     maxWidth: theme.spacing(38),
     minHeight: theme.spacing(26),
-    maxHeight: theme.spacing(26),
-    gap: theme.spacing(3),
   },
 }));
 
-const BottomFeatureBox = styled(Box)(({ theme }) => ({
+const FeatureBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
   gap: theme.spacing(1),
   color: "white",
-  width: "17%",
   position: "relative",
-  bottom: 80,
+  bottom: theme.spacing(7),
 
   [theme.breakpoints.down("sm")]: {
-    width: "40%",
-    bottom: 45,
+    bottom: theme.spacing(5),
   },
 }));
 
@@ -82,20 +73,20 @@ const IconCircle = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
-  color: "#FFFFF",
+  color: "#FFFFFF",
   fontSize: theme.spacing(2.4),
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: theme.spacing(1.2),
+    fontSize: theme.spacing(1.5),
   },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[200],
-  fontSize: theme.spacing(1.4),
+  fontSize: theme.spacing(1.6),
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: theme.spacing(0.8),
+    fontSize: theme.spacing(1.1),
   },
 }));
 
@@ -103,82 +94,27 @@ function BottomContainer() {
   return (
     <MainContainer>
       <Container>
-        {/* Top row features */}
-        <Stack
-          justifyContent="space-around"
-          alignItems="center"
-          width="100%"
-          direction={"row"}
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            ".MuiGrid-item": {
+              padding: { xs: "40px 0px 0px 40px", sm: "10px 100px 50px" },
+            },
+          }}
         >
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={ClinicallyImg} alt="ClinicallyImg" />
-            </IconCircle>
-            <Title>Clinically Studied</Title>
-            <Description>
-              All products that we offer have undergone lab and safety tests
-            </Description>
-          </BottomFeatureBox>
-
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={VegetarianFriendlyImg} alt="VegetarianFriendlyImg" />
-            </IconCircle>
-            <Title>Vegetarian Friendly</Title>
-            <Description>
-              We have a wide selection of vegetarian products to meet your needs
-            </Description>
-          </BottomFeatureBox>
-
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={MadeInIndiaImg} alt="MadeInIndiaImg" />
-            </IconCircle>
-            <Title>Made In India</Title>
-            <Description>
-              Shop local and explore health products made right here in India
-            </Description>
-          </BottomFeatureBox>
-        </Stack>
-
-        {/* Bottom row features */}
-        <Stack
-          direction="row"
-          justifyContent="space-around"
-          alignItems="center"
-          width="100%"
-        >
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={FreeShippingImg} alt="FreeShippingImg" />
-            </IconCircle>
-            <Title>Free Shipping</Title>
-            <Description>
-              We deliver to your door with no shipping costs on your orders
-            </Description>
-          </BottomFeatureBox>
-
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={NoRiskImg} alt="NoRiskImg" />
-            </IconCircle>
-            <Title>No Risk</Title>
-            <Description>
-              We ensure that all products are safe and within their use-by date
-            </Description>
-          </BottomFeatureBox>
-
-          <BottomFeatureBox>
-            <IconCircle>
-              <Image src={GMOImg} alt="GMOImg" />
-            </IconCircle>
-            <Title>GMO Free</Title>
-            <Description>
-              Natural, no modified products and derivatives for those who need
-              it
-            </Description>
-          </BottomFeatureBox>
-        </Stack>
+          {features.map((feature, index) => (
+            <Grid item xs={6} md={4} key={index}>
+              <FeatureBox>
+                <IconCircle>
+                  <Image src={feature.icon} alt={feature.title} />
+                </IconCircle>
+                <Title>{feature.title}</Title>
+                <Description>{feature.description}</Description>
+              </FeatureBox>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </MainContainer>
   );
