@@ -8,7 +8,7 @@ Essential Vitamins is a modern e-commerce platform built with Next.js, TypeScrip
 
 ### Core Technologies
 
-- Frontend Framework: Next.js with TypeScript
+- Framework: Next.js with TypeScript
 - UI Library: Material-UI (MUI)
 
 ## Key Features
