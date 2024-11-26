@@ -1,8 +1,8 @@
 import { Box, Stack, styled, Typography } from "@mui/material";
 import React from "react";
-import Img1 from "@/public/BottomImages/blog1-450x580.jpg.webp";
-import Img2 from "@/public/BottomImages/blog2-450x580.jpg.webp";
+
 import Image from "next/image";
+import { alertMessage } from "@/data";
 
 interface ImageWrapperProps {
   "data-large"?: string;
@@ -82,116 +82,29 @@ const DateBadge = styled(Typography)(({ theme }) => ({
 function ImageContainer() {
   return (
     <Container>
-      {/* col-1 */}
-      <ImageBox>
-        <ImageWrapper data-large="true">
-          <Image
-            src={Img1}
-            alt={"img1"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="true">
-            the Covid-19 Epidemic In 2022 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-        <ImageWrapper data-large="false">
-          <Image
-            src={Img2}
-            alt={"img2"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="false">
-            the Covid-19 Epidemic In 2023 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-      </ImageBox>
-
-      {/* col-2 */}
-      <ImageBox>
-        <ImageWrapper data-large="false">
-          <Image
-            src={Img1}
-            alt={"img3"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="false">
-            the Covid-19 Epidemic In 2022 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-        <ImageWrapper data-large="true">
-          <Image
-            src={Img2}
-            alt={"img4"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="true">
-            the Covid-19 Epidemic In 2023 is Back
-          </TitleOverlay>
-        </ImageWrapper>
-      </ImageBox>
-
-      {/* col-3 */}
-      <ImageBox>
-        <ImageWrapper data-large="true">
-          <Image
-            src={Img1}
-            alt={"img5"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="true">
-            the Covid-19 Epidemic In 2022 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-        <ImageWrapper data-large="false">
-          <Image
-            src={Img2}
-            alt={"img6"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="false">
-            the Covid-19 Epidemic In 2023 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-      </ImageBox>
-
-      {/* col-4 */}
-      <ImageBox>
-        <ImageWrapper data-large="false">
-          <Image
-            src={Img1}
-            alt={"img7"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="false">
-            the Covid-19 Epidemic In 2022 is Back
-          </TitleOverlay>
-          <DateBadge>20 Apr</DateBadge>
-        </ImageWrapper>
-        <ImageWrapper data-large="true">
-          <Image
-            src={Img2}
-            alt={"img8"}
-            fill
-            style={{ borderRadius: "15px" }}
-          />
-          <TitleOverlay data-large="true">
-            Hac hendrerit mus nons semper suspendisse
-          </TitleOverlay>
-          <DateBadge>17 Mar</DateBadge>
-        </ImageWrapper>
-      </ImageBox>
+      {alertMessage.map((column, columnIndex) => (
+        <ImageBox key={columnIndex}>
+          {column.map((image, imageIndex) => (
+            <ImageWrapper
+              key={`${columnIndex}-${imageIndex}`}
+              data-large={image.isLarge.toString()}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                loading={"lazy"}
+                placeholder="blur"
+                style={{ borderRadius: "15px" }}
+              />
+              <TitleOverlay data-large={image.isLarge.toString()}>
+                {image.title}
+              </TitleOverlay>
+              <DateBadge>{image.date}</DateBadge>
+            </ImageWrapper>
+          ))}
+        </ImageBox>
+      ))}
     </Container>
   );
 }

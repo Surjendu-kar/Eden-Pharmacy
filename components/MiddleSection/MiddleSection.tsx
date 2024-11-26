@@ -155,6 +155,8 @@ function MiddleSection() {
                 alt={ingredient.title}
                 fill
                 style={{ objectFit: "cover" }}
+                loading={"lazy"}
+                placeholder="blur"
               />
             </Box>
 

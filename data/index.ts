@@ -7,6 +7,9 @@ import GMOImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8116.
 import MadeInIndiaImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8117.svg.svg";
 import ClinicallyImg from "@/public/HeroSectionImages/BottomContainerImages/Group-8111.svg (1).svg";
 
+import Image1 from "@/public/BottomImages/blog1-450x580.jpg.webp";
+import Image2 from "@/public/BottomImages/blog2-450x580.jpg.webp";
+
 export const Dummy_Ingredients = [
   {
     id: 1,
@@ -82,4 +85,71 @@ export const features = [
     description:
       "Natural, no modified products and derivatives for those who need it",
   },
+];
+
+export const alertMessage = [
+  [
+    {
+      src: Image1,
+      alt: "img1",
+      title: "the Covid-19 Epidemic In 2022 is Back",
+      date: "20 Apr",
+      isLarge: true,
+    },
+    {
+      src: Image2,
+      alt: "img2",
+      title: "the Covid-19 Epidemic In 2023 is Back",
+      date: "20 Apr",
+      isLarge: false,
+    },
+  ],
+  [
+    {
+      src: Image1,
+      alt: "img3",
+      title: "the Covid-19 Epidemic In 2022 is Back",
+      date: "20 Apr",
+      isLarge: false,
+    },
+    {
+      src: Image2,
+      alt: "img4",
+      title: "the Covid-19 Epidemic In 2023 is Back",
+      date: "20 Apr",
+      isLarge: true,
+    },
+  ],
+  [
+    {
+      src: Image1,
+      alt: "img5",
+      title: "the Covid-19 Epidemic In 2022 is Back",
+      date: "20 Apr",
+      isLarge: true,
+    },
+    {
+      src: Image2,
+      alt: "img6",
+      title: "the Covid-19 Epidemic In 2023 is Back",
+      date: "20 Apr",
+      isLarge: false,
+    },
+  ],
+  [
+    {
+      src: Image1,
+      alt: "img7",
+      title: "the Covid-19 Epidemic In 2022 is Back",
+      date: "20 Apr",
+      isLarge: false,
+    },
+    {
+      src: Image2,
+      alt: "img8",
+      title: "Hac hendrerit mus nons semper suspendisse",
+      date: "17 Mar",
+      isLarge: true,
+    },
+  ],
 ];
