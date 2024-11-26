@@ -28,7 +28,7 @@ function HeroSection() {
       <Heading>Essential Vitamins</Heading>
 
       {/* center content */}
-      <CenterContaianer />
+      <CenterContainer />
 
       {/* bottom content */}
     </MainContainer>
